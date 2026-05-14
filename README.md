@@ -1,8 +1,8 @@
 # 个人博客
 
-博客主题为 [vuepress-theme-plume](https://theme-plume.vuejs.press/)，主页卡片组件修改自 [Hoey](https://zhenghaoyang.cn/) 的博客
+博客主题为 [vuepress-theme-plume](https://theme-plume.vuejs.press/)，主页卡片组件修改自大佬 [Hoey](https://zhenghaoyang.cn/) 的博客
 
-网址：https://blog.rand777.space
+网址：https://www.rand777.com/ 部署于腾讯云 EdgeOne CDN（使用 GitHub Actions 自动部署到 gh-pages 分支，推送至 EdgeOne CDN）。
 
 ## 安装
 
@@ -16,85 +16,58 @@ pnpm run docs:dev
 
 博客主页为自定义页面，若你也在使用这个博客主题并想参考本博客主页，可查看以下详细说明：
 
-### 配置
-
-1. 自定义主页 组件代码位置为：`docs/.vuepress/theme/components` 下的所有除 `AllFriendContent.vue` 的 `.vue` 文件。
-`AllFriendContent.vue` 为自定义友情链接页面所需文件，具体可参考下文 [组件说明](#组件说明)。
-样式文件位置为 `docs/.vuepress/theme/styles/custom.css`。
-
-2. 在 `docs/.vuepress/client.js` 中，导入 `Custom.vue` 与 `docs/.vuepress/theme/styles/custom.css`：
-
-``` js
-import './theme/styles/custom.css'
-import Custom from './theme/components/Custom.vue'
-import Custom from './theme/components/AllFriendContent.vue'  // 友情链接页面所需组件
-  export default defineClientConfig({
-    enhance({ app }) {
-    app.component('Custom', Custom)
-    app.component('AllFriendContent', AllFriendContent)  
-  },
-})
-```
-
-3. 在 `docs/README.md` 修改主页配置：
-
-```markdown
----
-pageLayout: home
-externalLinkIcon: false
-config:
-  - type: Custom
----
-```
-
-4. AboutMeCharacter.vue 中的图表使用了 [echarts.js](https://echarts.apache.org/zh/index.html) ,因此需要安装此依赖：
-
-```shell
-npm install echarts
-```
+## 主要配置项
 
 ### 组件说明
 
-#### `Custom.vue` 为主页组件，主页内容即为以下卡片组件的组合。
+组件保存于 `docs/.vuepress/theme/components` 下，组件说明如下：
 
-#### `AboutMeName.vue` 为主页中 **自我介绍卡片**：
+#### 关于我
 
-![image](https://github.com/user-attachments/assets/a809cdd3-838c-4218-92f7-b3423153cfbd)
+| Vue 组件名           | 含义        | 备注                                                       |
+|-------------------|-----------|----------------------------------------------------------|
+| AboutMeCharacter  | MBTI 性格   | 在 1[6personalities](https://www.16personalities.com/) 测出 |
+| AboutMeFriendLink | 最下方友情链接组件 | `docs/.vuepress/theme/data/friends.json` 编辑友链信息          |
+| AboutMeLife       | 时间分布可视化   | 需安装 ECharts                                              |
+| AboutMeName       | 个人及站点简要信息 |                                                          |
+| AboutMeSkill      | 技能及工具掌握情况 | 在数组 `technology` 及 `tools` 中更改信息即可                           |
+| AboutMeText       | 纯文字模板     |                                                              |
 
-#### `AboutMeSkill.vue` 为主页中 **技能卡片**：
 
-你可以在 `AboutMeSkill.vue` 的 `script` 中修改 `technology` 与 `tools` 数组来更改卡片内容。其中 `type` 为 值，
-`icon` 为 [iconify](https://icon-sets.iconify.design/) 中的 **Icon name** 。
+### 学业
 
-![image](https://github.com/user-attachments/assets/53e8d05f-4d83-4fe0-a603-f4968834f51b)
+`Academy.vue` 参考了 luost26 的博客主页，展示个人学业、荣誉及科研等相关信息，目前仍在优化中。
 
-#### `AboutMeCharacter.vue` 为主页中 **性格卡片**：
+### 页面主题色、字体、字号、行间距调整
 
-![image](https://github.com/user-attachments/assets/2a57a3f8-9afd-4e98-a777-e5842cecce53)
+`AdjustPgeStyle.vue` 中的 `select` 组件分别对应页面主题色、字体、字号、行间距的调整，选择后会将对应的值存储在 `localStorage` 中，并在页面加载时读取并应用这些值。
 
-#### `AboutMeLife.vue` 为主页中 **我的日常卡片**：
+七种主题色以 css 形式保存在 `docs/.vuepress/public/styles`
 
-![image](https://github.com/user-attachments/assets/f8bf49f4-8a5b-424f-b551-20858296f316)
+鼠标移到右上角画板按钮即可
 
-#### `AboutMeFriendLink.vue` 为主页中 **友情链接卡片**：
+### 主页友情链接
 
-若你的友情链接较多，你可以将链接信息写在 例如 `docs/.vuepress/theme/data/friends.json`中，
-同时在 `AboutMeFriendLink.vue` 中的 `script` 将 `friends.json` 导入。
+友情链接组件 `AllFriendContent.vue` 中的友链信息保存在 `docs/.vuepress/theme/data/friends.json` 中，编辑此文件即可更改主页友情链接信息。
 
-卡片右上角 **所有好友** 按钮的友情链接页面跳转路径位置在  `AboutMeFriendLink.vue` 中 的 `<router-link to="（相对路径）">` 进行更改。
 
-若你也想自定义友情链接页面，可以参考 `docs/notes/more/friends.md`，并在 `client.js` 中导入 `AllFriendContent.vue`。
+### 布局插槽
 
-![image](https://github.com/user-attachments/assets/7a1207f0-ff82-4fba-beb4-f87ce7e6f4a7)
+基于 Plume 主题的布局插槽，设计了「文章编写状态」及「文章阅读量」页面，分别在 `ArticleReadStats.vue` 和 `ArticleWriteStatus.vue` 中实现。
 
-#### `AboutMeText.vue` 为主页中 **文本卡片**：
+其中「文章阅读状态」页面展示了正在编写的文章列表，点击后会跳转到对应的 GitHub 仓库地址；「文章阅读量」页面展示了发布的文章及其阅读量，数据来自 Vercount One 的后台统计；
 
-文本卡片使用了插槽，可以在 `Custom.vue` 中自定义内容，满足多种文本需求。
+而「文章编写状态」分五种，  draft: '这是一篇草稿',writing: '本文编写中',optimizing: '本文需要优化',published: '已发布',archived: '已存档'。方便自己和他人了解文章的编写状态。
 
-![image](https://github.com/user-attachments/assets/d69ec01a-9012-46c4-9f60-5665c5387432)
 
-![image](https://github.com/user-attachments/assets/615c4be7-dc1d-4c16-84b4-2b87e8a9b2d9)
+### 书架
+
+心血来潮写着玩的，展示了正在阅读的书籍，数据保存在 `docs/.vuepress/theme/components/BookIndex.vue` 的 `rawBooks` 中，编辑此处即可更改书架信息。
+
+### 底部宣传栏
+
+底部宣传栏组件 `Declaration.vue` 快速跳转本网站相关链接。
 
 ### 自定义卡片宽度
 
-卡片宽度在卡片组件的父 `div` 中使用 `class` 进行更改，`grid-row-1` 为一个卡片铺满一行，`grid-row-1-1` 为两个卡片 1:1 行排, `grid-row-3-2` 为两个卡片 3:2 行排,你可以在 `Custom.vue` 的 `style` 中写更多的布局方式，随意组合卡片。
+卡片宽度在卡片组件的父 `div` 中使用 `class` 进行更改，`grid-row-1` 为一个卡片铺满一行，`grid-row-1-1` 为两个卡片 1:1 行排, `grid-row-3-2` 为两个卡片 3:2 行排, 你可以在 `Custom.vue` 的 `style` 中写更多的布局方式，随意组合卡片。
