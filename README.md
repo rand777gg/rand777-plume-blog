@@ -2,9 +2,13 @@
 
 博客主题为 [vuepress-theme-plume](https://theme-plume.vuejs.press/)，主页卡片组件修改自大佬 [Hoey](https://zhenghaoyang.cn/) 的博客
 
-网址：https://www.rand777.com/ 部署于腾讯云 EdgeOne CDN（使用 GitHub Actions 自动部署到 gh-pages 分支，推送至 EdgeOne CDN）。
+网址：https://www.rand777.com 部署于腾讯云 EdgeOne CDN（使用 GitHub Actions 自动部署到 gh-pages 分支，推送至 EdgeOne CDN）。
 
 ## 安装
+
+```sh
+git clone https://github.com/rand777gg/rand777-plume-blog
+```
 
 ```sh
 pnpm i
@@ -55,7 +59,7 @@ pnpm run docs:dev
 
 基于 Plume 主题的布局插槽，设计了「文章编写状态」及「文章阅读量」页面，分别在 `ArticleReadStats.vue` 和 `ArticleWriteStatus.vue` 中实现。
 
-其中「文章阅读状态」页面展示了正在编写的文章列表，点击后会跳转到对应的 GitHub 仓库地址；「文章阅读量」页面展示了发布的文章及其阅读量，数据来自 Vercount One 的后台统计；
+其中「文章阅读状态」页面展示了正在编写的文章状态；「文章阅读量」页面展示了发布的文章及其阅读量，数据来自 Vercount One 的后台统计；
 
 而「文章编写状态」分五种，  draft: '这是一篇草稿',writing: '本文编写中',optimizing: '本文需要优化',published: '已发布',archived: '已存档'。方便自己和他人了解文章的编写状态。
 
