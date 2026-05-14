@@ -60,7 +60,6 @@ export default defineCollection({
             prefix: 'linux',
             items: [
                 'begin',
-                'access-management',
                 {
                     text: '各种发行版',
                     icon: 'mingcute:linux-fill',
@@ -210,120 +209,141 @@ export default defineCollection({
         //         },
         //     ]
         // },
+        // {
+        //     text: '前端开发',
+        //     icon: 'mingcute:web-line',
+        //     collapsed: false,
+        //     prefix: 'frontend',
+        //     items: [
+        //         'begin',
+        //         {
+        //             text: '基础三件套',
+        //             prefix: '01-basis',
+        //             badge: 'draft',
+        //             icon: 'flowbite:html-solid',
+        //             collapsed: true,
+        //             items: [
+        //                 'HTML',
+        //                 'CSS',
+        //                 'JavaScript',
+        //             ]
+        //         },
+        //         {
+        //             text: '包管理器',
+        //             icon: 'codicon:package',
+        //             collapsed: true,
+        //             badge: 'draft',
+        //             prefix: '02-packaging-manager',
+        //             items: [
+        //                 'npm',
+        //                 'pnpm',
+        //                 'yarn',
+        //                 'Bun'
+        //             ]
+        //         },
+        //         //
+        //         // {
+        //         //     text: '',
+        //         //     icon: '',
+        //         //     collapsed: true,
+        //         //     badge: '',
+        //         //     prefix: '',
+        //         //     items: [
+        //         //         '',
+        //         //     ]
+        //         // },
+        //         // {
+        //         //     text: '',
+        //         //     icon: '',
+        //         //     collapsed: true,
+        //         //     badge: '',
+        //         //     prefix: '',
+        //         //     items: [
+        //         //         '',
+        //         //     ]
+        //         // },
+        //         // {
+        //         //     text: '',
+        //         //     icon: '',
+        //         //     collapsed: true,
+        //         //     badge: '',
+        //         //     prefix: '',
+        //         //     items: [
+        //         //         '',
+        //         //     ]
+        //         // },
+        //         // {
+        //         //     text: '',
+        //         //     icon: '',
+        //         //     collapsed: true,
+        //         //     badge: '',
+        //         //     prefix: '',
+        //         //     items: [
+        //         //         '',
+        //         //     ]
+        //         // },
+        //         // {
+        //         //     text: '',
+        //         //     icon: '',
+        //         //     collapsed: true,
+        //         //     badge: '',
+        //         //     prefix: '',
+        //         //     items: [
+        //         //         '',
+        //         //     ]
+        //         // },
+        //         // {
+        //         //     text: '',
+        //         //     icon: '',
+        //         //     collapsed: true,
+        //         //     badge: '',
+        //         //     prefix: '',
+        //         //     items: [
+        //         //         '',
+        //         //     ]
+        //         // },
+        //         // {
+        //         //     text: '',
+        //         //     icon: '',
+        //         //     collapsed: true,
+        //         //     badge: '',
+        //         //     prefix: '',
+        //         //     items: [
+        //         //         '',
+        //         //     ]
+        //         // },
+        //         // {
+        //         //     text: '',
+        //         //     icon: '',
+        //         //     collapsed: true,
+        //         //     badge: '',
+        //         //     prefix: '',
+        //         //     items: [
+        //         //         '',
+        //         //     ]
+        //         // },
+        //
+        //     ]
+        // },
         {
-            text: '前端开发',
-            icon: 'mingcute:web-line',
+            text: '机器学习',
+            icon: 'mingcute:ai-fill',
             collapsed: false,
-            prefix: 'frontend',
+            badge: '',
+            prefix: 'machine-learning',
             items: [
-                'begin',
                 {
-                    text: '基础三件套',
-                    prefix: '01-basis',
-                    badge: 'draft',
-                    icon: 'flowbite:html-solid',
+                    text: '数学基础',
+                    icon: 'fluent:math-formula-24-regular',
                     collapsed: true,
+                    badge: 'writing',
+                    prefix: 'math-basis',
                     items: [
-                        'HTML',
-                        'CSS',
-                        'JavaScript',
+                        '01-Linear-Algebra',
+                        '02-Calculus',
+                        '03-discret-mathematics'
                     ]
-                },
-                {
-                    text: '包管理器',
-                    icon: 'codicon:package',
-                    collapsed: true,
-                    badge: 'draft',
-                    prefix: '02-packaging-manager',
-                    items: [
-                        'npm',
-                        'pnpm',
-                        'yarn',
-                        'Bun'
-                    ]
-                },
-                //
-                // {
-                //     text: '',
-                //     icon: '',
-                //     collapsed: true,
-                //     badge: '',
-                //     prefix: '',
-                //     items: [
-                //         '',
-                //     ]
-                // },
-                // {
-                //     text: '',
-                //     icon: '',
-                //     collapsed: true,
-                //     badge: '',
-                //     prefix: '',
-                //     items: [
-                //         '',
-                //     ]
-                // },
-                // {
-                //     text: '',
-                //     icon: '',
-                //     collapsed: true,
-                //     badge: '',
-                //     prefix: '',
-                //     items: [
-                //         '',
-                //     ]
-                // },
-                // {
-                //     text: '',
-                //     icon: '',
-                //     collapsed: true,
-                //     badge: '',
-                //     prefix: '',
-                //     items: [
-                //         '',
-                //     ]
-                // },
-                // {
-                //     text: '',
-                //     icon: '',
-                //     collapsed: true,
-                //     badge: '',
-                //     prefix: '',
-                //     items: [
-                //         '',
-                //     ]
-                // },
-                // {
-                //     text: '',
-                //     icon: '',
-                //     collapsed: true,
-                //     badge: '',
-                //     prefix: '',
-                //     items: [
-                //         '',
-                //     ]
-                // },
-                // {
-                //     text: '',
-                //     icon: '',
-                //     collapsed: true,
-                //     badge: '',
-                //     prefix: '',
-                //     items: [
-                //         '',
-                //     ]
-                // },
-                // {
-                //     text: '',
-                //     icon: '',
-                //     collapsed: true,
-                //     badge: '',
-                //     prefix: '',
-                //     items: [
-                //         '',
-                //     ]
-                // },
-
+                }
             ]
         },
         {
@@ -559,44 +579,23 @@ export default defineCollection({
                 }
             ]
         },
-        {
-            text: '机器学习',
-            icon: 'mingcute:ai-fill',
-            collapsed: false,
-            badge: '',
-            prefix: 'machine-learning',
-            items: [
-                {
-                    text: '数学基础',
-                    icon: 'fluent:math-formula-24-regular',
-                    collapsed: true,
-                    badge: 'writing',
-                    prefix: 'math-basis',
-                    items: [
-                        '01-Linear-Algebra',
-                        '02-Calculus',
-                        '03-discret-mathematics'
-                    ]
-                }
-            ]
-        },
-        {
-            text: '机器人开发',
-            icon: 'simple-icons:ros',
-            prefix: 'ros2',
-            items: [
-                'README.md',
-                {
-                    text: '机械臂建模仿真',
-                    icon: 'file-icons:3d-model',
-                    prefix: 'arm-modeling-simulation',
-                    collapsed: true,
-                    items: [
-                        'modified-DH',
-                    ]
-                }
-            ]
-        },
+        // {
+        //     text: '机器人开发',
+        //     icon: 'simple-icons:ros',
+        //     prefix: 'ros2',
+        //     items: [
+        //         'README.md',
+        //         {
+        //             text: '机械臂建模仿真',
+        //             icon: 'file-icons:3d-model',
+        //             prefix: 'arm-modeling-simulation',
+        //             collapsed: true,
+        //             items: [
+        //                 'modified-DH',
+        //             ]
+        //         }
+        //     ]
+        // },
     ],
 
 })
