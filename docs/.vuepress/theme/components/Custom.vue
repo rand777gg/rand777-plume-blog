@@ -11,7 +11,7 @@
       <a href="https://stackoverflow.com/users/21395974/rand777" target="_blank" class="head-social-btn">
         <icon name="mdi:stackoverflow"/>
       </a>
-      <a href="https://github.com/rand777gg" target="_blank" class="head-social-btn">
+      <a href="https://github.com/rand777gg/rand777-plume-blog" target="_blank" class="head-social-btn">
         <icon name="mdi:github"/>
       </a>
       <router-link to="/blog/" class="head-social-avatar">
