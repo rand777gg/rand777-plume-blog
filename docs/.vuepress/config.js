@@ -102,6 +102,6 @@ export default defineUserConfig({
             lineNumbers: false,  // 启用行号 https://theme-plume.vuejs.press/guide/code/features/#%E4%BB%A3%E7%A0%81%E8%A1%8C%E5%8F%B7
         },
         // 添加您的部署域名
-        hostname: 'https://blog.rand777.com',
+        hostname: 'https://www.rand777.com',
     }),
 })
