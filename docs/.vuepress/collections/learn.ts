@@ -332,6 +332,7 @@ export default defineCollection({
             badge: '',
             prefix: 'machine-learning',
             items: [
+                'begin',
                 {
                     text: '数学基础',
                     icon: 'fluent:math-formula-24-regular',
