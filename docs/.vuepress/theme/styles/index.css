@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'LogoFont';
+    src: url('/font/segoesc.ttf') format('truetype');
+}
+
+/*颜色*/
+:root {
+    /*JetBrains Junie green colors*/
+    --junie-green-color: #47e054;
+    --junie-green-color-50: rgba(71, 224, 84, 0.5);
+    
+    /*文章背景线条颜色*/
+    --vp-doc-blog-bg: rgba(71, 224, 84, 0.09);
+    /*博客单项hover border 颜色*/
+    --vp-blog-post-item-hover-border: rgba(71, 224, 84, 0.5);
+    /*博客单项hover shadow*/
+    --vp-blog-post-item-hover-shadow: rgba(71, 224, 84, 0.2);
+}
+
+[data-theme="dark"] {
+    --vp-doc-blog-bg: rgba(71, 224, 84, 0.05);
+    --vp-blog-post-item-hover-border: rgba(71, 224, 84, 0.4);
+    --vp-blog-post-item-hover-shadow: rgba(71, 224, 84, 0.15);
+}
+
+.language-shell {
+    font-family: "JetBrains Mono", fantasy;
+}
+
+/*左上角logo*/
+.vp-navbar-title span{
+    font-family: LogoFont, serif;
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+/*博客页面 单个卡片效果*/
+.vp-blog-post-item{
+    @media screen and (max-width: 770px) {
+        margin: 0 0!important;
+        border-radius: 6px;
+    }
+    transition: box-shadow 0.2s ease-out,border-color 0.2s ease-out!important;
+    border: 1px rgba(255, 0, 0, 0) solid;
+    &:hover{
+        box-shadow: 0 0 7px 2px var(--vp-blog-post-item-hover-shadow)!important;
+        border: 1px var(--vp-blog-post-item-hover-border) solid;
+    }
+}

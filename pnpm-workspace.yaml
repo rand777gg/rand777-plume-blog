@@ -1,0 +1,5 @@
+allowBuilds:
+  '@parcel/watcher': true
+  'highlight.js': true
+  esbuild: true
+  vue-demi: true

@@ -1,0 +1,16 @@
+---
+title: 「服务器端」开发
+createTime: 2025/09/19 04:29:03
+permalink: /learn/backend/
+icon: iconoir:developer
+---
+
+「后端开发」是指 Web 开发的服务器端方面，专注于创建和管理服务器逻辑、数据库和 API。它涉及处理用户身份验证、授权和处理用户请求，通常使用 Python、Java、Ruby、PHP、JavaScript （Node.js） 和 .NET 等后端开发语言 。
+
+后端开发人员专注于创建和维护 Web 应用程序的服务器端组件。他们的主要任务是开发服务器端 API、处理数据库作并确保后端能够有效地管理高流量。主要职责包括集成支付网关和云服务等外部服务，以及增强系统的性能和可扩展性。该角色对于处理和保护数据至关重要，是支持前端开发人员提供无缝用户体验的支柱。
+
+后端框架是为 Web 应用程序的服务器端提供支持的框架。他们负责管理数据、处理请求以及生成对应用程序客户端的响应。一些最流行的后端框架包括 Django for Python、Ruby on Rails for Ruby、Spring Boot for Java 和 Gin for Go。
+
+这些框架与 PostgreSQL、MySQL 和 MongoDB 等数据库以及 Docker、Kubernetes 和 Jenkins 等工具配合使用。后端框架与其他服务器端组件协同工作，以创建用户在 Web 应用程序的客户端上与之交互的功能。
+
+如果你是一个刚刚入门的初学者，你可以从学习后端编程语言开始，如 Python、Ruby、Java、Go 等。一旦您对该语言有了基本到中级的了解，请了解该语言的「包管理器」，并了解如何在应用程序中安装和使用外部包。学习一些关系数据库（例如 PostgreSQL）的基础知识，并学习如何运行简单的 CRUD 作。或者，您也可以为所选语言学习 Web 框架。了解如何构建一个简单的 RESTful API 并在其中实现简单的身份验证/授权。在学习上述所有项目时，不要忘记了解 Git 和 GitHub。
