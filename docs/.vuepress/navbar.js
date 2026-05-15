@@ -74,10 +74,15 @@ export const navbar = defineNavbarConfig([
             //     link: '/learn/UX-design/',
             //     icon: 'ri:user-5-fill'
             // },
+            // {
+            //     text: '前端开发',
+            //     link: '/learn/frontend/',
+            //     icon: 'uil:web-grid'
+            // },
             {
-                text: '前端开发',
-                link: '/learn/frontend/',
-                icon: 'uil:web-grid'
+                text: '机器学习',
+                link: '/learn/ml/',
+                icon: 'mingcute:ai-fill'
             },
             {
                 text: '后端开发',
@@ -151,11 +156,6 @@ export const navbar = defineNavbarConfig([
             //     link: '/learn/AI-Agent/',
             //     icon: 'fluent:agents-28-filled'
             // },
-            {
-                text: '机器学习',
-                link: '/learn/ml/',
-                icon: 'mingcute:ai-fill'
-            },
         ]
     },
     {
