@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'LogoFont';
-    src: url('/font/segoesc.ttf') format('truetype');
+    src: url('/font/segoesc.woff2') format('woff2');
 }
 
 /*颜色*/
