@@ -6,6 +6,7 @@ import collections from './collections/index.js'
 export default defineUserConfig({
 
     head: [
+        ['link', {rel: 'preload', href: '/font/segoesc.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous'}],
         ['link', {rel: 'preload', href: '/styles/eyecare-green.css', as: 'style'}],
         ['link', {rel: 'preload', href: '/styles/eyecare-blue.css', as: 'style'}],
         ['link', {rel: 'preload', href: '/styles/eyecare-yellow.css', as: 'style'}],

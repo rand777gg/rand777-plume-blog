@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'LogoFont';
     src: url('/font/segoesc.woff2') format('woff2');
+    font-display: swap;
 }
 
 /*颜色*/
