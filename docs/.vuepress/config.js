@@ -7,13 +7,13 @@ export default defineUserConfig({
 
     head: [
         ['link', {rel: 'preload', href: '/font/segoesc.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous'}],
-        ['link', {rel: 'preload', href: '/styles/eyecare-green.css', as: 'style'}],
-        ['link', {rel: 'preload', href: '/styles/eyecare-blue.css', as: 'style'}],
-        ['link', {rel: 'preload', href: '/styles/eyecare-yellow.css', as: 'style'}],
-        ['link', {rel: 'preload', href: '/styles/eyecare-grey.css', as: 'style'}],
-        ['link', {rel: 'preload', href: '/styles/eyecare-orange.css', as: 'style'}],
-        ['link', {rel: 'preload', href: '/styles/eyecare-pink.css', as: 'style'}],
-        ['link', {rel: 'preload', href: '/styles/eyecare-white.css', as: 'style'}],
+        ['link', {rel: 'prefetch', href: '/styles/eyecare-green.css', as: 'style'}],
+        ['link', {rel: 'prefetch', href: '/styles/eyecare-blue.css', as: 'style'}],
+        ['link', {rel: 'prefetch', href: '/styles/eyecare-yellow.css', as: 'style'}],
+        ['link', {rel: 'prefetch', href: '/styles/eyecare-grey.css', as: 'style'}],
+        ['link', {rel: 'prefetch', href: '/styles/eyecare-orange.css', as: 'style'}],
+        ['link', {rel: 'prefetch', href: '/styles/eyecare-pink.css', as: 'style'}],
+        ['link', {rel: 'prefetch', href: '/styles/eyecare-white.css', as: 'style'}],
         // JetBrains Mono
         ['link', {
             rel: 'stylesheet',
