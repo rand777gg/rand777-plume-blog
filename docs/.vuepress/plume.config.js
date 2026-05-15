@@ -10,7 +10,7 @@ export default defineThemeConfig({
         name: 'rand777',
         description: 'Life is a long lesson in humility.',
         circle: true,
-        location: 'Zhejiang, China',
+        location: 'Shenzhen, China',
         organization: 'PGuide Dev',
     },
     navbar,
