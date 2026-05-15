@@ -12,6 +12,17 @@ status: writing
 
 ::: echarts 3D Curve Surface Plot Example
 ```js
+await window.__echartsGlReady;
+
+var data = [];
+var min = -1, max = 1, step = 0.05;
+for (var x = min; x <= max; x += step) {
+    for (var y = min; y <= max; y += step) {
+        var z = Math.sin(x * Math.PI) * Math.sin(y * Math.PI);
+        data.push([x, y, z]);
+    }
+}
+
 option = {
     tooltip: {},
     backgroundColor: 'transparent',
@@ -40,24 +51,13 @@ option = {
     yAxis3D: { type: 'value' },
     zAxis3D: { type: 'value' },
     grid3D: {
-        viewControl: {
-            
-        },
+        viewControl: {},
         boxHeight: 80
     },
     series: [{
         type: 'surface',
         wireframe: {},
-        equation: {
-            x: { step: 0.05 },
-            y: { step: 0.05 },
-            z: function (x, y) {
-                if (Math.abs(x) < 0.1 && Math.abs(y) < 0.1) {
-                    return '-';
-                }
-                return Math.sin(x * Math.PI) * Math.sin(y * Math.PI);
-            }
-        }
+        data: data
     }]
 };
 

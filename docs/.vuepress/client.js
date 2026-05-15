@@ -1,5 +1,4 @@
 import {defineClientConfig} from 'vuepress/client'
-import 'echarts-gl'
 import './theme/styles/index.css'
 import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 import AllFriendContent from './theme/components/AllFriendContent.vue'
@@ -18,6 +17,7 @@ import './theme/styles/custom.css'
 
 export default defineClientConfig({
     enhance({app}) {
+        if (typeof window !== 'undefined') window.__echartsGlReady = import('echarts-gl')
         app.component('RepoCard', RepoCard)
         app.component('Custom', Custom)
         app.component('AllFriendContent', AllFriendContent)
