@@ -30,12 +30,12 @@ pnpm run docs:dev
 
 | Vue 组件名           | 含义        | 备注                                                       |
 |-------------------|-----------|----------------------------------------------------------|
-| AboutMeCharacter  | MBTI 性格   | 在 1[6personalities](https://www.16personalities.com/) 测出 |
+| AboutMeCharacter  | MBTI 性格   | 在 [16personalities](https://www.16personalities.com/) 测出 |
 | AboutMeFriendLink | 最下方友情链接组件 | `docs/.vuepress/theme/data/friends.json` 编辑友链信息          |
 | AboutMeLife       | 时间分布可视化   | 需安装 ECharts                                              |
 | AboutMeName       | 个人及站点简要信息 |                                                          |
-| AboutMeSkill      | 技能及工具掌握情况 | 在数组 `technology` 及 `tools` 中更改信息即可                           |
-| AboutMeText       | 纯文字模板     |                                                              |
+| AboutMeSkill      | 技能及工具掌握情况 | 在数组 `technology` 及 `tools` 中更改信息即可                       |
+| AboutMeText       | 纯文字模板     |                                                          |
 
 
 ### 学业
@@ -59,14 +59,15 @@ pnpm run docs:dev
 
 基于 Plume 主题的布局插槽，设计了「文章编写状态」及「文章阅读量」页面，分别在 `ArticleReadStats.vue` 和 `ArticleWriteStatus.vue` 中实现。
 
-其中「文章阅读状态」页面展示了正在编写的文章状态；「文章阅读量」页面展示了发布的文章及其阅读量，数据来自 Vercount One 的后台统计；
+其中「文章编写状态」分五种，  draft: '这是一篇草稿',writing: '本文编写中',optimizing: '本文需要优化',published: '已发布',archived: '已存档'。方便自己和他人了解文章的编写状态。
 
-而「文章编写状态」分五种，  draft: '这是一篇草稿',writing: '本文编写中',optimizing: '本文需要优化',published: '已发布',archived: '已存档'。方便自己和他人了解文章的编写状态。
+「文章阅读量」页面展示了发布的文章及其阅读量，数据来自 [Vercount One](https://vercount.one/) 的后台统计；
 
+有关布局插槽的使用方法可参考 [VuePress Plume Theme 官方文档](https://theme-plume.vuejs.press/guide/layout-slots/)。
 
 ### 书架
 
-心血来潮写着玩的，展示了正在阅读的书籍，数据保存在 `docs/.vuepress/theme/components/BookIndex.vue` 的 `rawBooks` 中，编辑此处即可更改书架信息。
+心血来潮写着玩的，展示了正在阅读的书籍，数据保存在 `docs/.vuepress/theme/components/BookIndex.vue` 的 `rawBooks` 中，编辑此处即可更改书籍信息。
 
 ### 底部宣传栏
 
