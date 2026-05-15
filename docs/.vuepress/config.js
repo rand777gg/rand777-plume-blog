@@ -58,6 +58,8 @@ export default defineUserConfig({
 
     theme: plumeTheme({
 
+        llmstxt: true,
+
         collections,
 
         outline: 'deep', // 启用深度侧边栏

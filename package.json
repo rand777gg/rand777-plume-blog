@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.28",
+    "@vuepress/plugin-llms": "2.0.0-rc.128",
     "http-server": "^14.1.1",
     "markmap-lib": "^0.18.12",
     "markmap-toolbar": "^0.18.12",
@@ -25,23 +26,21 @@
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "esbuild",
-      "highlight.js",
       "vue-demi"
     ],
     "ignoredBuiltDependencies": [
       "@parcel/watcher",
-      "highlight.js",
       "vue-demi"
     ]
   },
   "dependencies": {
-    "esbuild": "^0.27.7",
     "@iconify/json": "^2.2.473",
     "@vuepress/shiki-twoslash": "2.0.0-rc.128",
     "clsx": "^2.1.1",
     "cobe": "^0.6.5",
     "dotted-map": "^2.2.3",
     "echarts": "^6.0.0",
+    "esbuild": "^0.27.7",
     "highlighter": "^0.1.0",
     "mermaid": "^11.15.0",
     "motion": "^12.38.0",

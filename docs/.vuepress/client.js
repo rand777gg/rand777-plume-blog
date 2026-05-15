@@ -9,6 +9,7 @@ import AdjustPageStyle from "./theme/components/AdjustPageStyle.vue";
 import Declaration from "./theme/components/Declaration.vue";
 import ArticleReadStats from "./theme/components/ArticleReadStats.vue";
 import ArticleWriteStatus from "./theme/components/ArticleWriteStatus.vue";
+import PageContextMenu from 'vuepress-theme-plume/features/PageContextMenu.vue'
 import {Layout} from "vuepress-theme-plume/client";
 import Academy from "./theme/components/Academy.vue";
 import {h} from 'vue'
@@ -28,7 +29,8 @@ export default defineClientConfig({
             'nav-bar-menu-after': () => h(AdjustPageStyle),
             'footer-content': () => h(Declaration),
             'doc-footer-before': () => h(ArticleReadStats),
-            'doc-meta-after': () => h(ArticleWriteStatus)
+            'doc-meta-after': () => h(ArticleWriteStatus),
+            'doc-title-after': () => h(PageContextMenu),
         }),
     },
 })
