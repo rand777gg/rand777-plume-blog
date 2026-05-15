@@ -69,8 +69,6 @@ setTimeout(function () {
     var btnCss = 'padding:4px 8px;cursor:pointer;border:1px solid #ccc;border-radius:4px;background:rgba(255,255,255,0.85);font-size:12px;line-height:1.4';
     var bar = document.createElement('div');
     bar.style.cssText = 'position:absolute;top:6px;right:6px;z-index:10';
-
-    bar.appendChild(fsBtn);
     wrapper.appendChild(bar);
 }, 100);
 
