@@ -23,10 +23,6 @@
         background-color: var(--vp-c-bg);
     }
 
-    .mini-search {
-        background-color: var(--vp-code-block-bg);
-    }
-
     #localsearch-input {
         background-color: var(--vp-c-bg);
     }
