@@ -19,10 +19,10 @@ status: published
 
 ```
 我的名称: rand777
-网站地址: https://blog.rand777.com
+网站地址: https://www.rand777.com
 描述: 摇摇晃晃，也能到达目的地。
-头像: https://blog.rand777.com/avatar.jpg
-站点图片: https://blog.rand777.com/siteshot.png
+头像: https://www.rand777.com/avatar.jpg
+站点图片: https://www.rand777.com/siteshot.jpg
 ```
 
 ### _友情链接申请_
