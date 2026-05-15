@@ -29,9 +29,6 @@ importers:
       esbuild:
         specifier: ^0.27.7
         version: 0.27.7
-      highlighter:
-        specifier: ^0.1.0
-        version: 0.1.0
       mermaid:
         specifier: ^11.15.0
         version: 11.15.0
@@ -2152,13 +2149,6 @@ packages:
   highlight.js@11.11.1:
     resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==}
     engines: {node: '>=12.0.0'}
-
-  highlight.js@9.18.5:
-    resolution: {integrity: sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==}
-    deprecated: Support has ended for 9.x series. Upgrade to @latest
-
-  highlighter@0.1.0:
-    resolution: {integrity: sha512-vruV85H6j06DaMqrP732KeY7W1MZTYvX4cFsXQGDf31P/cRVzCUVnI8FWDSlVQwSZFZye4a3vr47qPY+ynny1Q==}
 
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
@@ -5671,12 +5661,6 @@ snapshots:
   hey-listen@1.0.8: {}
 
   highlight.js@11.11.1: {}
-
-  highlight.js@9.18.5: {}
-
-  highlighter@0.1.0:
-    dependencies:
-      highlight.js: 9.18.5
 
   hookable@5.5.3: {}
 
