@@ -5,3 +5,75 @@ permalink: /learn/984t18vg/
 icon: tabler:math-integral-x
 status: writing
 ---
+
+- Video Resource: [https://www.youtube.com/playlist?list=PLybg94GvOJ9ELZEe9s2NXTKr41Yedbw7M](https://www.youtube.com/playlist?list=PLybg94GvOJ9ELZEe9s2NXTKr41Yedbw7M)
+
+## ECharts 3D Surface Plot Example
+
+::: echarts 3D Curve Surface Plot Example
+```js
+option = {
+    tooltip: {},
+    backgroundColor: 'transparent',
+    visualMap: {
+        show: false,
+        dimension: 2,
+        min: -1,
+        max: 1,
+        inRange: {
+            color: [
+                '#313695',
+                '#4575b4',
+                '#74add1',
+                '#abd9e9',
+                '#e0f3f8',
+                '#ffffbf',
+                '#fee090',
+                '#fdae61',
+                '#f46d43',
+                '#d73027',
+                '#a50026'
+            ]
+        }
+    },
+    xAxis3D: { type: 'value' },
+    yAxis3D: { type: 'value' },
+    zAxis3D: { type: 'value' },
+    grid3D: {
+        viewControl: {
+            
+        },
+        boxHeight: 80
+    },
+    series: [{
+        type: 'surface',
+        wireframe: {},
+        equation: {
+            x: { step: 0.05 },
+            y: { step: 0.05 },
+            z: function (x, y) {
+                if (Math.abs(x) < 0.1 && Math.abs(y) < 0.1) {
+                    return '-';
+                }
+                return Math.sin(x * Math.PI) * Math.sin(y * Math.PI);
+            }
+        }
+    }]
+};
+
+setTimeout(function () {
+    var dom = myChart.getDom();
+    var wrapper = dom.parentElement;
+    wrapper.style.position = 'relative';
+
+    var btnCss = 'padding:4px 8px;cursor:pointer;border:1px solid #ccc;border-radius:4px;background:rgba(255,255,255,0.85);font-size:12px;line-height:1.4';
+    var bar = document.createElement('div');
+    bar.style.cssText = 'position:absolute;top:6px;right:6px;z-index:10';
+
+    bar.appendChild(fsBtn);
+    wrapper.appendChild(bar);
+}, 100);
+
+```
+:::
+

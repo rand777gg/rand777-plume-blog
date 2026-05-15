@@ -1,4 +1,5 @@
 import {defineClientConfig} from 'vuepress/client'
+import 'echarts-gl'
 import './theme/styles/index.css'
 import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 import AllFriendContent from './theme/components/AllFriendContent.vue'
