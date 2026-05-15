@@ -587,7 +587,8 @@ const threeRef = ref<{
   scene: THREE.Scene;
   camera: THREE.OrthographicCamera;
   material: THREE.ShaderMaterial;
-  clock: THREE.Clock;
+  timer: THREE.Timer;
+  elapsedTime: number;
   clickIx: number;
   uniforms: {
     uResolution: { value: THREE.Vector2 };
@@ -702,7 +703,8 @@ const setup = () => {
     const quadGeom = new THREE.PlaneGeometry(2, 2);
     const quad = new THREE.Mesh(quadGeom, material);
     scene.add(quad);
-    const clock = new THREE.Clock();
+    const timer = new THREE.Timer();
+    let elapsed = 0;
     const setSize = () => {
       const w = container.clientWidth || 1;
       const h = container.clientHeight || 1;
@@ -803,7 +805,9 @@ const setup = () => {
         raf = requestAnimationFrame(animate);
         return;
       }
-      uniforms.uTime.value = timeOffset + clock.getElapsedTime() * speedRef.value;
+      timer.update();
+      elapsed += timer.getDelta() * speedRef.value;
+      uniforms.uTime.value = timeOffset + elapsed;
       if (liquidEffect) liquidEffect.uniforms.get('uTime')!.value = uniforms.uTime.value;
       if (composer) {
         if (touch) touch.update();
@@ -826,7 +830,8 @@ const setup = () => {
       scene,
       camera,
       material,
-      clock,
+      timer,
+      elapsedTime: 0,
       clickIx: 0,
       uniforms,
       resizeObserver: ro,
