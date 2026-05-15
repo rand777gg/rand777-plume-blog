@@ -8,10 +8,12 @@
     />
     <div class="head-social">
 
-      <a href="https://stackoverflow.com/users/21395974/rand777" target="_blank" class="head-social-btn">
+      <a href="https://stackoverflow.com/users/21395974/rand777" target="_blank"
+         class="head-social-btn">
         <icon name="mdi:stackoverflow"/>
       </a>
-      <a href="https://github.com/rand777gg/rand777-plume-blog" target="_blank" class="head-social-btn">
+      <a href="https://github.com/rand777gg/rand777-plume-blog" target="_blank"
+         class="head-social-btn">
         <icon name="mdi:github"/>
       </a>
       <router-link to="/blog/" class="head-social-avatar">
@@ -221,7 +223,16 @@ import AboutMeLife from "./AboutMeLife.vue";
 import AboutMeFriendLink from "./AboutMeFriendLink.vue";
 import {Effect, EffectComposer, EffectPass, RenderPass} from 'postprocessing';
 import * as THREE from 'three';
-import {computed, onBeforeUnmount, onMounted, onUnmounted, ref, useTemplateRef, watch, type CSSProperties} from 'vue';
+import {
+  computed,
+  onBeforeUnmount,
+  onMounted,
+  onUnmounted,
+  ref,
+  useTemplateRef,
+  watch,
+  type CSSProperties
+} from 'vue';
 import {useDarkMode} from 'vuepress-theme-plume/composables'
 
 const isDark = useDarkMode()
@@ -287,7 +298,14 @@ const createTouchTexture = () => {
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   };
-  const drawPoint = (p: { x: number; y: number; vx: number; vy: number; force: number; age: number }) => {
+  const drawPoint = (p: {
+    x: number;
+    y: number;
+    vx: number;
+    vy: number;
+    force: number;
+    age: number
+  }) => {
     const pos = {x: p.x * size, y: (1 - p.y) * size};
     let intensity = 1;
     const easeOutSine = (t: number) => Math.sin((t * Math.PI) / 2);
@@ -351,7 +369,10 @@ const createTouchTexture = () => {
   };
 };
 
-const createLiquidEffect = (texture: THREE.Texture, opts?: { strength?: number; freq?: number }) => {
+const createLiquidEffect = (texture: THREE.Texture, opts?: {
+  strength?: number;
+  freq?: number
+}) => {
   const fragment = `
     uniform sampler2D uTexture;
     uniform float uStrength;
@@ -434,7 +455,7 @@ float Bayer2(vec2 a) {
 #define FBM_LACUNARITY  1.25
 #define FBM_GAIN        1.0
 
-float hash11(float n){ return fract(sin(n)*43758.5453); }
+float hash11(float n){return fract(sin(n)*43758.5453);}
 
 float vnoise(vec3 p){
   vec3 ip = floor(p);
@@ -587,7 +608,7 @@ const threeRef = ref<{
   scene: THREE.Scene;
   camera: THREE.OrthographicCamera;
   material: THREE.ShaderMaterial;
-  clock: THREE.Clock;
+  timer: THREE.Timer;
   clickIx: number;
   uniforms: {
     uResolution: { value: THREE.Vector2 };
@@ -702,7 +723,7 @@ const setup = () => {
     const quadGeom = new THREE.PlaneGeometry(2, 2);
     const quad = new THREE.Mesh(quadGeom, material);
     scene.add(quad);
-    const clock = new THREE.Clock();
+    const timer = new THREE.Timer();
     const setSize = () => {
       const w = container.clientWidth || 1;
       const h = container.clientHeight || 1;
@@ -748,7 +769,7 @@ const setup = () => {
       }
       const noiseEffect = new Effect(
           'NoiseEffect',
-          `uniform float uTime; uniform float uAmount; float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7))) * 43758.5453);} void mainUv(inout vec2 uv){} void mainImage(const in vec4 inputColor,const in vec2 uv,out vec4 outputColor){ float n=hash(floor(uv*vec2(1920.0,1080.0))+floor(uTime*60.0)); float g=(n-0.5)*uAmount; outputColor=inputColor+vec4(vec3(g),0.0);} `,
+          `uniform float uTime; uniform float uAmount; float hash(vec2 p){return fract(sin(dot(p, vec2(127.1,311.7))) * 43758.5453);} void mainUv(inout vec2 uv){} void mainImage(const in vec4 inputColor,const in vec2 uv,out vec4 outputColor){float n=hash(floor(uv*vec2(1920.0,1080.0))+floor(uTime*60.0)); float g=(n-0.5)*uAmount; outputColor=inputColor+vec4(vec3(g),0.0);} `,
           {
             uniforms: new Map<string, THREE.Uniform>([
               ['uTime', new THREE.Uniform(0)],
@@ -803,7 +824,7 @@ const setup = () => {
         raf = requestAnimationFrame(animate);
         return;
       }
-      uniforms.uTime.value = timeOffset + clock.getElapsedTime() * speedRef.value;
+      uniforms.uTime.value = timeOffset + timer.getElapsed() * speedRef.value;
       if (liquidEffect) liquidEffect.uniforms.get('uTime')!.value = uniforms.uTime.value;
       if (composer) {
         if (touch) touch.update();
@@ -826,7 +847,7 @@ const setup = () => {
       scene,
       camera,
       material,
-      clock,
+      timer,
       clickIx: 0,
       uniforms,
       resizeObserver: ro,
