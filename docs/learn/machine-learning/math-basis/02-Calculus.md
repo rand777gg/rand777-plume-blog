@@ -75,3 +75,48 @@ setTimeout(function () {
 ```
 :::
 
+:::echarts
+```js
+await window.__echartsGlReady;
+
+var data = [];
+for (var i = 0; i <= 20; i++) {
+    for (var j = 0; j <= 20; j++) {
+        for (var k = 0; k <= 20; k++) {
+            var value = Math.sin(i / 3) * Math.cos(j / 3) * Math.sin(k / 3)
+                      + Math.cos(i / 5) * Math.sin(j / 5) * Math.cos(k / 5)
+                      + 4;
+            data.push([i, j, k, value]);
+        }
+    }
+}
+
+option = {
+    visualMap: {
+        show: false,
+        min: 2,
+        max: 6,
+        inRange: {
+            symbolSize: [0.5, 25],
+            color: [
+                '#313695', '#4575b4', '#74add1', '#abd9e9',
+                '#e0f3f8', '#ffffbf', '#fee090', '#fdae61',
+                '#f46d43', '#d73027', '#a50026'
+            ],
+            colorAlpha: [0.2, 1]
+        }
+    },
+    xAxis3D: { type: 'value' },
+    yAxis3D: { type: 'value' },
+    zAxis3D: { type: 'value' },
+    grid3D: {
+        axisLine: { lineStyle: { color: '#fff' } },
+        axisPointer: { lineStyle: { color: '#fff' } }
+    },
+    series: [{
+        type: 'scatter3D',
+        data: data
+    }]
+};
+```
+:::
