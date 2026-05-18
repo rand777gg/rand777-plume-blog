@@ -12,7 +12,6 @@ export default defineCollection({
             prefix: 'journal-weekly',
             items: [
                 'begin',
-                '2025-09',
                 '2025-08',
             ]
         },
