@@ -19,10 +19,24 @@
             Miss occurs whilst glittering stars wandering.
           </p>
           <div class="contact-links">
-            <a href="mailto:hi@rand777.com">✉ hi@rand777.com</a>
-<!--            <a href="https://scholar.google.com/citations?user=xFmQpf4AAAAJ" target="_blank">Google Scholar</a>-->
-            <a href="https://github.com/rand777gg" target="_blank">😽GitHub</a>
-            <a href="https://cv.rand777.com" target="_blank">📄Curriculum Vitae</a>
+            <a href="#" target="_blank" title="Google Scholar">
+              <icon name="academicons:google-scholar" size="2em"/>
+            </a>
+            <a href="#" target="_blank" title="ORCID">
+              <icon name="simple-icons:orcid" size="2em"/>
+            </a>
+            <a href="mailto:hi@rand777.com">
+              <icon name="ic:baseline-email" size="2em"/>
+            </a>
+            <a href="https://github.com/rand777gg" target="_blank" title="GitHub">
+              <icon name="mdi:github" size="2em"/>
+            </a>
+            <a href="https://cv.rand777.com" target="_blank" title="Curriculum Vitae">
+              <icon name="academicons:cv" size="2em"/>
+            </a>
+            <a href="#" target="_blank" title="npmjs">
+              <icon name="pixel:npm" size="2em"/>
+            </a>
           </div>
         </div>
 
@@ -37,10 +51,12 @@
           <ul class="edu-list">
             <li v-for="edu in education" :key="edu.school" class="edu-item">
               <img :src="edu.logo" :alt="edu.school" class="edu-logo" />
-              <div>
+              <div class="edu-info">
                 <strong>{{ edu.school }}</strong>
-                <p class="edu-degree">{{ edu.degree }}</p>
-                <em class="edu-period">{{ edu.period }}</em>
+                <div class="edu-meta">
+                  <span class="edu-degree">{{ edu.degree }}</span>
+                  <em class="edu-period">{{ edu.period }}</em>
+                </div>
               </div>
             </li>
           </ul>
@@ -56,7 +72,7 @@
             </li>
           </ul>
         </section>
-        <!-- News -->
+<!--         News-->
 <!--        <section class="content-section glass">-->
 <!--          <h6 class="section-label">News</h6>-->
 <!--          <div v-for="group in newsGroups" :key="group.year" class="news-year-group">-->
@@ -73,45 +89,46 @@
 <!--          </div>-->
 <!--        </section>-->
 
-<!--        &lt;!&ndash; Publications &ndash;&gt;-->
-<!--        <section class="content-section glass">-->
-<!--          <h6 class="section-label">-->
-<!--            Selected Publications-->
-<!--            <a href="#" class="view-all">(view all)</a>-->
-<!--          </h6>-->
-<!--          <div class="pub-list">-->
-<!--            <article v-for="pub in publications" :key="pub.title" class="pub-item">-->
-<!--              <img v-if="pub.image" :src="pub.image" :alt="pub.title" class="pub-img" />-->
-<!--              <div class="pub-body">-->
-<!--                <h5 class="pub-title">{{ pub.title }}</h5>-->
-<!--                <p class="pub-authors" v-html="pub.authors"></p>-->
-<!--                <p class="pub-venue">-->
-<!--                  <em>{{ pub.venue }}</em> {{ pub.year }}-->
-<!--                  <span v-if="pub.badge" class="pub-badge">{{ pub.badge }}</span>-->
-<!--                </p>-->
-<!--                <p class="pub-tldr">{{ pub.tldr }}</p>-->
-<!--                <div class="pub-links">-->
-<!--                  <a-->
-<!--                      v-for="link in pub.links"-->
-<!--                      :key="link.label"-->
-<!--                      :href="link.url"-->
-<!--                      target="_blank"-->
-<!--                      class="pub-link"-->
-<!--                  >[{{ link.label }}]</a>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </article>-->
-<!--          </div>-->
-<!--          <div class="all-pubs-link">-->
-<!--            <a href="#">All publications</a>-->
-<!--          </div>-->
-<!--        </section>-->
+        <!-- Publications -->
+        <section class="content-section glass">
+          <h6 class="section-label">
+            Selected Publications
+            <a href="#" class="view-all">(view all)</a>
+          </h6>
+          <div class="pub-list">
+            <article v-for="pub in publications" :key="pub.title" class="pub-item">
+              <img v-if="pub.image" :src="pub.image" :alt="pub.title" class="pub-img" />
+              <div class="pub-body">
+                <h5 class="pub-title">{{ pub.title }}</h5>
+                <p class="pub-authors" v-html="pub.authors"></p>
+                <p class="pub-venue">
+                  <em>{{ pub.venue }}</em> {{ pub.year }}
+                  <span v-if="pub.badge" class="pub-badge">{{ pub.badge }}</span>
+                </p>
+                <p class="pub-tldr">{{ pub.tldr }}</p>
+                <div class="pub-links">
+                  <a
+                      v-for="link in pub.links"
+                      :key="link.label"
+                      :href="link.url"
+                      target="_blank"
+                      class="pub-link"
+                  >[{{ link.label }}]</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="all-pubs-link">
+            <a href="#">All publications</a>
+          </div>
+        </section>
       </div>
     </main>
   </div>
 </template>
 
 <script setup>
+
 const education = [
   {
     school: 'Chongqing Medical University',
@@ -189,12 +206,8 @@ const publications = [
 
 .page {
   --accent: #007bff;
-  --text: #1a1a1a;
-  --muted: #6b6459;
-  --border: rgba(255, 255, 255, 0.35);
-  --glass-bg: rgba(255, 255, 255, 0.45);
-  --glass-blur: 18px;
-  --glass-shadow: 0 8px 32px rgba(80, 50, 30, 0.10), 0 1.5px 6px rgba(80, 50, 30, 0.07);
+  --text: var(--vp-c-text-1);
+  --muted: var(--vp-c-text-2);
   --badge-bg: rgba(240, 236, 230, 0.7);
 
   min-height: 100vh;
@@ -217,18 +230,14 @@ const publications = [
 
 /* Glass card */
 .glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur)) saturate(1.4);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.4);
-  border: 1px solid var(--border);
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
-  border-left: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow: var(--glass-shadow);
-  border-radius: 8px;
+  background-color: var(--main-card-background);
+  border: 1px solid var(--main-card-border);
+  box-shadow: 0 8px 12px -4px var(--main-border-shadow);
+  border-radius: 12px;
 }
 
 .layout {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
   display: grid;
@@ -239,10 +248,9 @@ const publications = [
   z-index: 1;
 }
 
-/* Sidebar */
 .sidebar {
   position: sticky;
-  top: 2rem;
+  top: calc(var(--vp-nav-height, 0px) + 2rem);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -300,19 +308,23 @@ const publications = [
 
 .contact-links {
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  align-items: flex-start;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  flex-direction: row;
+  gap: 0.2rem;
+  justify-content: center;
+  justify-items: center;
+  border-top: 1px dotted var(--vp-c-text);
   padding-top: 0.75rem;
 }
 
 .contact-links a {
-  font-size: 0.78rem;
-  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
   text-decoration: none;
+  transition: color 0.2s;
 }
-.contact-links a:hover { text-decoration: underline; }
+.contact-links a:hover { color: var(--accent); }
 
 /* Sidebar sections */
 .sidebar-section { padding: 1.25rem 1.5rem; }
@@ -332,19 +344,29 @@ const publications = [
 
 /* Education */
 .edu-list { list-style: none; display: flex; flex-direction: column; gap: 1.1rem; }
-.edu-item { display: flex; gap: 0.75rem; align-items: flex-start; }
+.edu-item { display: flex; gap: 0.75rem; align-items: center; }
 
 .edu-logo {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   flex-shrink: 0;
-  margin-top: 2px;
+  border-radius: 6px;
 }
 
+.edu-info { flex: 1; min-width: 0; }
+
 .edu-item strong { font-size: 0.82rem; font-weight: 500; display: block; }
-.edu-degree { font-size: 0.75rem; color: var(--muted); margin: 0.15rem 0; }
-.edu-period { font-size: 0.72rem; color: var(--muted); }
+
+.edu-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.edu-degree { font-size: 0.75rem; color: var(--muted); }
+.edu-period { font-size: 0.72rem; color: var(--muted); white-space: nowrap; }
 
 /* Awards */
 .award-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
@@ -410,11 +432,10 @@ const publications = [
 .pub-item:last-child { border-bottom: none; padding-bottom: 0; }
 
 .pub-img {
-  width: 140px;
-  height: 94px;
+  width: 168px;
+  height: 92px;
   object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border:1px solid var(--badge-bg);
   flex-shrink: 0;
   box-shadow: 0 2px 10px rgba(80, 50, 30, 0.1);
 }
@@ -466,7 +487,23 @@ const publications = [
 @media (max-width: 768px) {
   .layout { grid-template-columns: 1fr; gap: 1.5rem; }
   .sidebar { position: static; }
+  .content-section { padding: 1.25rem 1.25rem; }
+  .edu-item { gap: 0.6rem; }
+  .edu-logo { width: 36px; height: 36px; }
+  .edu-meta { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
+  .award-item { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
+  .award-year { white-space: normal; }
+  .contact-links { gap: 0.6rem; }
+  .profile-card { padding: 1.25rem 1rem; }
   .pub-item { grid-template-columns: 1fr; }
   .pub-img { width: 100%; height: 160px; }
+}
+</style>
+
+<style>
+.vp-home-box .container,
+.vp-home-custom,
+.vp-content.is-home {
+  overflow: visible !important;
 }
 </style>
