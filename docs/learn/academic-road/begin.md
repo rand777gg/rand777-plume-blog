@@ -12,3 +12,7 @@ icon: streamline:street-road-remix
 科研的过程，往往伴随着孤独与挫折。你可能会遇到实验失败、数据不理想、论文被拒等情况，这些都需要你有足够的心理准备和坚韧的毅力去面对。
 
 加油吧，研究生！就算是在学历贬值的大背景下，科研的能力依然是非常宝贵的。无论你未来选择继续深造还是进入职场，科研经历都会为你提供独特的视角和解决问题的能力。
+
+对于钻研机器学习的研究生们，这里推荐西湖大学「[科学模拟与发现的 AI 实验室](https://ai4s.lab.westlake.edu.cn/)」旗下的科研工具推荐，相信对你有所帮助，具体请查看 GitHub 仓库。
+
+<RepoCard repo="AI4Science-WestlakeU/research_toolbox"></RepoCard>
