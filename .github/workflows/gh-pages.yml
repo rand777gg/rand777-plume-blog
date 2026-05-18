@@ -27,7 +27,7 @@ jobs:
           cache: pnpm
 
       - name: 安装依赖
-        run: pnpm install --frozen-lockfile --no-verify-store
+        run: pnpm install --frozen-lockfile
 
       - name: 构建文档中
         env:
