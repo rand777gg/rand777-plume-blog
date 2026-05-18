@@ -347,239 +347,239 @@ export default defineCollection({
                 }
             ]
         },
-        {
-            text: '后端开发',
-            icon: 'simple-icons:backendless',
-            collapsed: false,
-            prefix: 'backend',
-            items: [
-                'begin',
-                {
-                    text: '开发语言',
-                    icon: 'simple-icons:go',
-                    collapsed: true,
-                    badge: 'writing',
-                    prefix: '01-langs',
-                    items: [
-                        'Python',
-                        'Go'
-                    ]
-                },
-                {
-                    text: 'Web 服务器',
-                    icon: 'solar:server-broken',
-                    collapsed: true,
-                    badge: 'writing',
-                    prefix: 'web-server',
-                    items: [
-                        'Caddy',
-                        'Nginx',
-                        'Apache',
-                    ]
-                },
-                {
-                    text: '数据库',
-                    icon: 'mdi:database',
-                    collapsed: true,
-                    prefix: 'database',
-                    badge: 'writing',
-                    items: [
-                        {
-                            text: '关系型数据库',
-                            icon: '',
-                            collapsed: true,
-                            prefix: 'relational',
-                            items: [
-                                'PostgresSQL',
-                                'MySQL'
-                            ]
-                        },
-                        {
-                            text: 'NoSQL 数据库',
-                            icon: '',
-                            collapsed: true,
-                            prefix: 'no-sql',
-                            items: [
-                                'Redis',
-                                'InfluxDB',
-                                'Neo4j',
-                                'ClickHouse',
-                                'MongoDB',
-                                'Firebase'
-                            ]
-                        },
-                        {
-                            text: '更多',
-                            collapsed: true,
-                            prefix: 'more',
-                            icon: 'si:more-horiz-circle-duotone',
-                            items: [
-                                'transaction.md',
-                                'ACID.md',
-                                'normalization.md',
-                                'failure-modes.md',
-                                'profiling-performance.md'
-                            ]
-                        }
-                    ]
-                },
-                {
-                    text: 'API',
-                    icon: 'icon-park-twotone:api',
-                    collapsed: true,
-                    badge: 'writing',
-                    prefix: 'api',
-                    items: [
-                        {
-                            text: 'API styles',
-                            icon: 'material-symbols:style',
-                            collapsed: true,
-                            prefix: 'styles',
-                            items: [
-                                'RESTful',
-                                'JSON'
-                            ]
-                        },
-                        {
-                            text: '身份验证',
-                            icon: 'arcticons:ente-authenticator',
-                            collapsed: true,
-                            prefix: 'authentication',
-                            items: [
-                                'Basic',
-                                'Token',
-                                'Cookie',
-                                'JWT',
-                                'OAuth',
-                                'OpenID',
-                                'SAML'
-                            ]
-                        },
-                        {
-                            text: 'Web 安全',
-                            icon: 'ic:twotone-security',
-                            collapsed: true,
-                            prefix: 'web-security',
-                            items: [
-                                {
-                                    text: '哈希算法',
-                                    prefix: 'hash-algo',
-                                    icon: 'simple-icons:nicehash',
-                                    collapsed: true,
-                                    items: [
-                                        'MD5',
-                                        'SHA',
-                                        'scrypt',
-                                        'bcrypt'
-                                    ]
-                                },
-                                'HTTPS',
-                                'CSP',
-                                'CORS',
-                                'OWASP',
-                                'server',
-                                'SSL-TLS'
-                            ]
-                        }
-                    ]
-                },
-                {
-                    text: '测试',
-                    icon: 'grommet-icons:test',
-                    collapsed: true,
-                    badge: 'writing',
-                    prefix: 'testing',
-                    items: [
-                        'methods',
-                        'containerization'
-                    ]
-                },
-                {
-                    text: '消息代理',
-                    icon: 'simple-icons:iobroker',
-                    collapsed: true,
-                    badge: 'writing',
-                    prefix: 'message-broker',
-                    items: [
-                        'kafka',
-                        'automq'
-                    ]
-                },
-                {
-                    text: 'CI/CD',
-                    icon: 'clarity:ci-cd-line',
-                    collapsed: true,
-                    badge: '',
-                    prefix: 'ci-cd',
-                    items: [
-                        'concept',
-                        'GitHubActions'
-                    ]
-                },
-                {
-                    text: '架构模式',
-                    icon: 'bi:layer-backward',
-                    collapsed: true,
-                    badge: 'writing',
-                    prefix: 'architecture-patterns',
-                    items: [
-                        'Monolith',
-                        'Microservice',
-                        'Serverless',
-                        'SOA',
-                        'server-mesh',
-                        '2FA'
-                    ]
-                },
-                {
-                    text: '实时数据',
-                    icon: 'tdesign:time',
-                    collapsed: true,
-                    badge: 'writing',
-                    prefix: 'realtime-data',
-                    items: [
-                        'polling',
-                        'Web Sockets',
-                        'SSE'
-                    ]
-                },
-                {
-                    text: '可伸缩性',
-                    icon: 'streamline-sharp:3d-scale-remix',
-                    collapsed: true,
-                    badge: 'writing',
-                    prefix: 'build-for-scale',
-                    items: [
-                        {
-                            text: 'observability',
-                            icon: 'simple-icons:observable',
-                            collapsed: true,
-                            badge: '',
-                            prefix: 'observability',
-                            items: [
-                                'instrument',
-                                'monitor',
-                                'telemetry'
-                            ]
-                        },
-                        {
-                            text: 'mitigation-strategies',
-                            icon: 'akar-icons:health',
-                            collapsed: true,
-                            badge: '',
-                            prefix: 'mitigation-strategies',
-                            items: [
-                                'backpressure',
-                                'circuit-breaker',
-                                'degradation',
-                                'load-shifting',
-                                'throttling'
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
+        // {
+        //     text: '后端开发',
+        //     icon: 'simple-icons:backendless',
+        //     collapsed: false,
+        //     prefix: 'backend',
+        //     items: [
+        //         'begin',
+        //         {
+        //             text: '开发语言',
+        //             icon: 'simple-icons:go',
+        //             collapsed: true,
+        //             badge: 'writing',
+        //             prefix: '01-langs',
+        //             items: [
+        //                 'Python',
+        //                 'Go'
+        //             ]
+        //         },
+        //         {
+        //             text: 'Web 服务器',
+        //             icon: 'solar:server-broken',
+        //             collapsed: true,
+        //             badge: 'writing',
+        //             prefix: 'web-server',
+        //             items: [
+        //                 'Caddy',
+        //                 'Nginx',
+        //                 'Apache',
+        //             ]
+        //         },
+        //         {
+        //             text: '数据库',
+        //             icon: 'mdi:database',
+        //             collapsed: true,
+        //             prefix: 'database',
+        //             badge: 'writing',
+        //             items: [
+        //                 {
+        //                     text: '关系型数据库',
+        //                     icon: '',
+        //                     collapsed: true,
+        //                     prefix: 'relational',
+        //                     items: [
+        //                         'PostgresSQL',
+        //                         'MySQL'
+        //                     ]
+        //                 },
+        //                 {
+        //                     text: 'NoSQL 数据库',
+        //                     icon: '',
+        //                     collapsed: true,
+        //                     prefix: 'no-sql',
+        //                     items: [
+        //                         'Redis',
+        //                         'InfluxDB',
+        //                         'Neo4j',
+        //                         'ClickHouse',
+        //                         'MongoDB',
+        //                         'Firebase'
+        //                     ]
+        //                 },
+        //                 {
+        //                     text: '更多',
+        //                     collapsed: true,
+        //                     prefix: 'more',
+        //                     icon: 'si:more-horiz-circle-duotone',
+        //                     items: [
+        //                         'transaction.md',
+        //                         'ACID.md',
+        //                         'normalization.md',
+        //                         'failure-modes.md',
+        //                         'profiling-performance.md'
+        //                     ]
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             text: 'API',
+        //             icon: 'icon-park-twotone:api',
+        //             collapsed: true,
+        //             badge: 'writing',
+        //             prefix: 'api',
+        //             items: [
+        //                 {
+        //                     text: 'API styles',
+        //                     icon: 'material-symbols:style',
+        //                     collapsed: true,
+        //                     prefix: 'styles',
+        //                     items: [
+        //                         'RESTful',
+        //                         'JSON'
+        //                     ]
+        //                 },
+        //                 {
+        //                     text: '身份验证',
+        //                     icon: 'arcticons:ente-authenticator',
+        //                     collapsed: true,
+        //                     prefix: 'authentication',
+        //                     items: [
+        //                         'Basic',
+        //                         'Token',
+        //                         'Cookie',
+        //                         'JWT',
+        //                         'OAuth',
+        //                         'OpenID',
+        //                         'SAML'
+        //                     ]
+        //                 },
+        //                 {
+        //                     text: 'Web 安全',
+        //                     icon: 'ic:twotone-security',
+        //                     collapsed: true,
+        //                     prefix: 'web-security',
+        //                     items: [
+        //                         {
+        //                             text: '哈希算法',
+        //                             prefix: 'hash-algo',
+        //                             icon: 'simple-icons:nicehash',
+        //                             collapsed: true,
+        //                             items: [
+        //                                 'MD5',
+        //                                 'SHA',
+        //                                 'scrypt',
+        //                                 'bcrypt'
+        //                             ]
+        //                         },
+        //                         'HTTPS',
+        //                         'CSP',
+        //                         'CORS',
+        //                         'OWASP',
+        //                         'server',
+        //                         'SSL-TLS'
+        //                     ]
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             text: '测试',
+        //             icon: 'grommet-icons:test',
+        //             collapsed: true,
+        //             badge: 'writing',
+        //             prefix: 'testing',
+        //             items: [
+        //                 'methods',
+        //                 'containerization'
+        //             ]
+        //         },
+        //         {
+        //             text: '消息代理',
+        //             icon: 'simple-icons:iobroker',
+        //             collapsed: true,
+        //             badge: 'writing',
+        //             prefix: 'message-broker',
+        //             items: [
+        //                 'kafka',
+        //                 'automq'
+        //             ]
+        //         },
+        //         {
+        //             text: 'CI/CD',
+        //             icon: 'clarity:ci-cd-line',
+        //             collapsed: true,
+        //             badge: '',
+        //             prefix: 'ci-cd',
+        //             items: [
+        //                 'concept',
+        //                 'GitHubActions'
+        //             ]
+        //         },
+        //         {
+        //             text: '架构模式',
+        //             icon: 'bi:layer-backward',
+        //             collapsed: true,
+        //             badge: 'writing',
+        //             prefix: 'architecture-patterns',
+        //             items: [
+        //                 'Monolith',
+        //                 'Microservice',
+        //                 'Serverless',
+        //                 'SOA',
+        //                 'server-mesh',
+        //                 '2FA'
+        //             ]
+        //         },
+        //         {
+        //             text: '实时数据',
+        //             icon: 'tdesign:time',
+        //             collapsed: true,
+        //             badge: 'writing',
+        //             prefix: 'realtime-data',
+        //             items: [
+        //                 'polling',
+        //                 'Web Sockets',
+        //                 'SSE'
+        //             ]
+        //         },
+        //         {
+        //             text: '可伸缩性',
+        //             icon: 'streamline-sharp:3d-scale-remix',
+        //             collapsed: true,
+        //             badge: 'writing',
+        //             prefix: 'build-for-scale',
+        //             items: [
+        //                 {
+        //                     text: 'observability',
+        //                     icon: 'simple-icons:observable',
+        //                     collapsed: true,
+        //                     badge: '',
+        //                     prefix: 'observability',
+        //                     items: [
+        //                         'instrument',
+        //                         'monitor',
+        //                         'telemetry'
+        //                     ]
+        //                 },
+        //                 {
+        //                     text: 'mitigation-strategies',
+        //                     icon: 'akar-icons:health',
+        //                     collapsed: true,
+        //                     badge: '',
+        //                     prefix: 'mitigation-strategies',
+        //                     items: [
+        //                         'backpressure',
+        //                         'circuit-breaker',
+        //                         'degradation',
+        //                         'load-shifting',
+        //                         'throttling'
+        //                     ]
+        //                 }
+        //             ]
+        //         }
+        //     ]
+        // },
         // {
         //     text: '机器人开发',
         //     icon: 'simple-icons:ros',

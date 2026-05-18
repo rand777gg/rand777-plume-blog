@@ -84,10 +84,10 @@ export const navbar = defineNavbarConfig([
                 link: '/learn/ml/',
                 icon: 'mingcute:ai-fill'
             },
-            {
-                text: '后端开发',
-                icon: 'streamline-ultimate:web-hook',
-                link: '/learn/backend/',
+            // {
+            //     text: '后端开发',
+            //     icon: 'streamline-ultimate:web-hook',
+            //     link: '/learn/backend/',
                 // items: [
                 //     {
                 //         text: '开发语言',
@@ -145,7 +145,7 @@ export const navbar = defineNavbarConfig([
                 //         icon: 'gis:select-extent'
                 //     },
                 // ]
-            },
+            // },
             // {
             //     text: 'ROS 2',
             //     link: '/learn/ros2/',

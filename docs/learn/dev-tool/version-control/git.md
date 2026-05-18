@@ -57,13 +57,9 @@ git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
     <command> [<args>]
 ```
 
-### 常用
-
-哎，我是真学不动这么多的命令，先只放几个常用的命令，Git 官方叫它 `giteveryday`，基于 Role「角色」进行分类：
-
-
-
 ## giteveryday
+
+常用 git 命令
 
 ### Individual
 
@@ -183,6 +179,6 @@ $ git push --follow-tags ko (13)
 ```
 ### Repository Administration
 
-权限管理，真难用（字面意义）
+个人使用场景较少，可以自行了解。
 
 > daemon,shell,http-backend,instaweb
