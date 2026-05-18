@@ -24,6 +24,11 @@
     #localsearch-input {
         background-color: var(--vp-c-bg);
     }
+
+    .mini-search-button {
+        background-color: transparent;
+        border: 0.5px solid var(--vp-c-text-1) !important;
+    }
 }
 [data-theme="dark"] {
 
