@@ -337,12 +337,12 @@ export default defineCollection({
                     text: '数学基础',
                     icon: 'fluent:math-formula-24-regular',
                     collapsed: true,
-                    badge: 'writing',
                     prefix: 'math-basis',
                     items: [
                         '01-Linear-Algebra',
                         '02-Calculus',
-                        '03-discret-mathematics'
+                        '03-discret-mathematics',
+                        '04-Statistics'
                     ]
                 }
             ]

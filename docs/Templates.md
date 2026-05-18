@@ -59,7 +59,12 @@ author=""
 <RepoCard repo=""></RepoCard>
 </CardGrid>
 
-@[pdf height="600"]()
+::: collapse expand
+- Click to expand or collapse
+
+  @[pdf zoom="95" ratio="21:29"]()
+
+:::
 
 <kbd></kbd>
 
