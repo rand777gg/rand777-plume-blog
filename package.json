@@ -32,12 +32,19 @@
     "echarts-gl": "^2.0.9",
     "esbuild": "^0.27.7",
     "mermaid": "^11.15.0",
-    "motion": "^12.38.0",
+    "motion": "12.38.0",
     "motion-v": "^1.10.3",
     "postprocessing": "^6.39.1",
     "tailwind-merge": "^3.6.0",
     "three": "^0.184.0",
     "typescript": "^5.9.3",
     "vue-use-spring": "^0.3.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "framer-motion": "12.38.0",
+      "motion-dom": "12.38.0",
+      "motion-utils": "12.36.0"
+    }
   }
 }
