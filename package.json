@@ -11,16 +11,16 @@
     "vp-update": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.28",
-    "@vuepress/plugin-llms": "2.0.0-rc.128",
+    "@vuepress/bundler-vite": "2.0.0-rc.30",
+    "@vuepress/plugin-llms": "2.0.0-rc.130",
     "http-server": "^14.1.1",
     "markmap-lib": "^0.18.12",
     "markmap-toolbar": "^0.18.12",
     "markmap-view": "^0.18.12",
     "sass-embedded": "^1.99.0",
     "vue": "^3.5.34",
-    "vuepress": "2.0.0-rc.28",
-    "vuepress-theme-plume": "1.0.0-rc.200"
+    "vuepress": "2.0.0-rc.30",
+    "vuepress-theme-plume": "1.0.0-rc.201"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -34,16 +34,16 @@
     ]
   },
   "dependencies": {
-    "@iconify/json": "^2.2.473",
-    "@vuepress/shiki-twoslash": "2.0.0-rc.128",
+    "@iconify/json": "^2.2.474",
+    "@vuepress/shiki-twoslash": "2.0.0-rc.130",
     "clsx": "^2.1.1",
     "cobe": "^0.6.5",
     "dotted-map": "^2.2.3",
-    "echarts": "^5.6.0",
+    "echarts": "^6.0.0",
     "echarts-gl": "^2.0.9",
     "esbuild": "^0.27.7",
     "mermaid": "^11.15.0",
-    "motion": "^12.38.0",
+    "motion": "^12.39.0",
     "motion-v": "^1.10.3",
     "postprocessing": "^6.39.1",
     "tailwind-merge": "^3.6.0",
