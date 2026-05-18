@@ -17,7 +17,7 @@ export default defineCollection({
         // }
         {
             text: '开发工具',
-            icon: 'mingcute:tool-fill',
+            icon: 'simple-icons:jetbrains',
             collapsed: false,
             prefix: 'dev-tool',
             items: [
@@ -48,7 +48,7 @@ export default defineCollection({
                     prefix: 'IDE',
                     items: [
                         'VS Code',
-                        'WebStorm',
+                        'JetBrains',
                     ]
                 }
             ]
@@ -60,19 +60,19 @@ export default defineCollection({
             prefix: 'linux',
             items: [
                 'begin',
-                {
-                    text: '各种发行版',
-                    icon: 'mingcute:linux-fill',
-                    collapsed: true,
-                    badge: '',
-                    prefix: 'releases',
-                    items: [
-                        'debian',
-                        'centos',
-                        'rocky',
-                        'arch',
-                    ]
-                },
+                // {
+                //     text: '各种发行版',
+                //     icon: 'mingcute:linux-fill',
+                //     collapsed: true,
+                //     badge: '',
+                //     prefix: 'releases',
+                //     items: [
+                //         'debian',
+                //         'centos',
+                //         'rocky',
+                //         'arch',
+                //     ]
+                // },
             ]
         },
         {
