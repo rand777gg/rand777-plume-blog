@@ -1,2 +1,3 @@
 only-built-dependencies=@parcel/watcher,esbuild,vue-demi
 ignored-built-dependencies=@parcel/watcher,vue-demi
+verify-store-integrity=false
