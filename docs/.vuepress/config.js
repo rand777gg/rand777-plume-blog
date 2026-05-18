@@ -4,7 +4,6 @@ import {plumeTheme} from 'vuepress-theme-plume'
 import collections from './collections/index.js'
 
 export default defineUserConfig({
-
     head: [
         ['link', {rel: 'preload', href: '/font/segoesc.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous'}],
         ['link', {rel: 'prefetch', href: '/styles/eyecare-green.css', as: 'style'}],
@@ -48,6 +47,11 @@ export default defineUserConfig({
             defer: true,
             src: 'https://events.vercount.one/js'
         }],
+        ['script', {
+            defer: true,
+            src: 'https://cloud.umami.is/script.js',
+            'data-website-id': '0a6206ef-ee68-4669-aca9-7417256ccd09'
+        }],
     ],
 
     base: '/',
@@ -58,9 +62,7 @@ export default defineUserConfig({
     bundler: viteBundler(),
 
     theme: plumeTheme({
-
         llmstxt: true,
-
         collections,
 
         outline: 'deep', // 启用深度侧边栏
