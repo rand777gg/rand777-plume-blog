@@ -44,7 +44,12 @@
     "overrides": {
       "framer-motion": "12.38.0",
       "motion-dom": "12.38.0",
-      "motion-utils": "12.36.0"
+      "motion-utils": "12.36.0",
+      "@types/node": "25.8.0",
+      "@vue/language-core": "3.2.9",
+      "baseline-browser-mapping": "2.10.30",
+      "dompurify": "3.4.4",
+      "lru-cache": "11.3.6"
     }
   }
 }
