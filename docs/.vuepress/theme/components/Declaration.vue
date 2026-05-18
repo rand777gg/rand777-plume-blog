@@ -4,6 +4,9 @@
 <template>
   <div class="declaration-wrapper">
     <div class="declaration-row">
+      <a class="declaration-item" href="https://openstax.org/" target="_blank" rel="noopener">
+        <img class="logo" src="https://openstax.org/dist/images/logo.svg" alt="VueJS" />
+      </a>
       <a class="declaration-item" href="https://ctext.org/zhs" target="_blank" rel="noopener">
         <img class="logo" src="https://ctext.org/logos/ctplogo1.gif" alt="Vue Bits" />
       </a>
