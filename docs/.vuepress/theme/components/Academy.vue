@@ -228,12 +228,14 @@ const publications = [
   opacity: 0.5;
 }
 
-/* Glass card */
+/* Glass card — Apple liquid glass */
 .glass {
-  background-color: var(--main-card-background);
-  border: 1px solid var(--main-card-border);
-  box-shadow: 0 8px 12px -4px var(--main-border-shadow);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
 }
 
 .layout {
@@ -505,5 +507,11 @@ const publications = [
 .vp-home-custom,
 .vp-content.is-home {
   overflow: visible !important;
+}
+
+[data-theme="dark"] .glass {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 </style>
