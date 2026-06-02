@@ -1,0 +1,84 @@
+# rand777
+
+> rand777' blog.This file contains links to all documentation sections.
+
+## Table of Contents
+
+### 博客
+
+- [UV：Rust 重写的快速 Python 包管理器](/article/20250717/index.md)
+- [在 Claude Code 中使用 DeepSeek V4 系列](/article/20260515/index.md)
+- [Corepack：NodeJS 包管理器的「桥梁」](/article/24091101/index.md)
+- [Vue3 部分组件导入时爆红](/article/24121401/index.md)
+- [JetBrains Junie： 深度集成的 AI 编程助手尝鲜](/article/hf69s8vu/index.md)
+- [博客简介](/article/npn0jnls/index.md)
+- [Minecraft - 我的世界](/article/r2b9r7l2/index.md)
+- [Typst：新一代文档排版工具](/article/uw01sg5r/index.md)
+
+### hobby
+
+- [Collects Motivation](/hobby/journal-weekly/begin/index.md)
+- [August 2025](/hobby/journal-weekly/August-2025/index.md)
+- [改掉这些坏习惯](/hobby/correct-assets/bad-hobbies/index.md)
+- [正确地拼写与发音](/hobby/professional-words-spell/index.md)
+
+### learn
+
+- [Git](/learn/version-control/Git/index.md)
+- [Git 规范](/learn/y5fr0111/index.md)
+- [GitHub](/learn/vc/platform/GitHub/index.md)
+- [GitLab](/learn/5tafj6qc/index.md)
+- [VS Code](/learn/ztkbwyny/index.md)
+- [JetBrains 系列](/learn/0nrvkjd8/index.md)
+- [「自由」的操作系统](/learn/Linux/index.md)
+- [你真的爱「科研」吗？](/learn/academic-road/index.md)
+- [LaTeX](/learn/ml5ssblk/index.md)
+- [Typst](/learn/3m38blgy/index.md)
+- [不止于「0到1」的概率](/learn/ml/index.md)
+- [Linear Algebra「线性代数」](/learn/math/linear-algebra/index.md)
+- [Calculus「微积分」](/learn/984t18vg/index.md)
+- [Discrete Mathematics「离散数学」](/learn/math/discrete-mathematics/index.md)
+- [Statistics「统计学」](/learn/pv8ahawu/index.md)
+
+### life
+
+- [曼波合集](/life/manbo/collection/index.md)
+
+### test
+
+- [中英文名词对照索引](/read/introduction-to-medicine/correspondent-index-of-chinese-and-english-terms/index.md)
+- [第一章 关于本书的对话](/read/OS/guidance/chap01/index.md)
+- [第二章 操作系统介绍](/read/OS/guidance/chap02/index.md)
+
+### Others
+
+- [AutoMQ](/learn/8aqvyhnx/index.md)
+- [「服务器端」开发](/learn/backend/index.md)
+- [JWT](/learn/backend/api/auth/JWT/index.md)
+- [JSON](/learn/backend/api/styles/JSON/index.md)
+- [RESTful](/learn/backend/api/styles/REST/index.md)
+- [ACID](/learn/backend/database/more/ACID/index.md)
+- [数据库事务](/learn/backend/database/more/transaction/index.md)
+- [Redis](/learn/backend/database/no-sql/Redis/index.md)
+- [PostgresSQL](/learn/backend/database/relational/PostgresSQL/index.md)
+- [Golang](/learn/backend/dev-langs/Go/index.md)
+- [Apache](/learn/backend/web-server/Apache/index.md)
+- [Caddy](/learn/backend/web-server/Caddy/index.md)
+- [Nginx](/learn/backend/web-server/Nginx/index.md)
+- [这是「看脸」的时代](/learn/design-system/index.md)
+- [GitHub Actions](/learn/fe6e832d/index.md)
+- [真是「切图仔」吗？](/learn/frontend/index.md)
+- [数据库扩容](/learn/glg6bujw/index.md)
+- [概念](/learn/k6dboi2z/index.md)
+- [Visual Studio](/learn/p8v6vw2w/index.md)
+- [Rocky Linux](/learn/rjtrdxr0/index.md)
+- [Apache Kafka](/learn/x00u9kfq/index.md)
+- [about](/more/about-blog/index.md)
+- [analytics](/more/analytics/index.md)
+- [友情链接](/more/friends/index.md): 我的好友们
+- [Open Source](/more/projects/index.md)
+- [网址导航](/more/sites-collect/index.md)
+- [《普通逻辑学》（第5版）](/read/ordinary-logic/index.md)
+- [概念](/read/ordinary-logic/concept/index.md)
+- [命题及推理](/read/ordinary-logic/proposition-and-inference/index.md)
+- [Templates](/templates/index.md)

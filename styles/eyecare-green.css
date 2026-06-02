@@ -1,0 +1,69 @@
+:root {
+    --vp-c-brand-1: #5086a1;
+    --vp-c-brand-2: #6aa1b7;
+    --vp-c-brand-3: #8cccd5;
+    --vp-c-brand-soft: rgba(131, 208, 218, 0.314);
+
+    --vp-c-text-1: rgba(55, 65, 64, 1);
+    --vp-c-text-2: rgba(75, 85, 84, 0.85);
+    --vp-c-text-3: rgba(95, 105, 104, 0.68);
+
+    --vp-c-bg: rgba(232, 245, 233, 1);
+    --vp-nav-bg-color: rgba(232, 245, 233, 1);
+    --vp-nav-screen-bg-color: rgba(232, 245, 233, 1);
+    --vp-local-nav-bg-color: rgba(222, 235, 223, 0.95);
+    --vp-sidebar-bg-color: rgba(222, 235, 223, 0.95);
+    --vp-code-block-bg: rgba(194, 218, 197, 0.95);
+
+    .vp-file-tree{
+        background-color: var(--vp-code-block-bg);
+    }
+
+    .vp-menu {
+        background-color: var(--vp-c-bg);
+    }
+
+    #localsearch-input {
+        background-color: var(--vp-c-bg);
+    }
+
+    .mini-search-button {
+        background-color: transparent;
+        border: 0.5px solid var(--vp-c-text-1) !important;
+        @media screen and (max-width: 770px) {
+            background-color: transparent !important;
+            border-color: transparent !important;
+        }
+    }
+}
+
+[data-theme="dark"] {
+
+    /**
+     * 主题色
+     * -------------------------------------------------------------------------- */
+
+    --vp-c-brand-1: #8cccd5; /* 链接颜色、强调色 */
+    --vp-c-brand-2: #6aa1b7; /* 链接、按钮 hover 颜色 */
+    --vp-c-brand-3: #5086a1; /* 背景色、边框色 */
+    --vp-c-brand-soft: rgba(131, 208, 218, 0.314); /* 辅助色 */
+
+    /**
+     * 文本颜色
+     * -------------------------------------------------------------------------- */
+
+    --vp-c-text-1: rgba(255, 255, 245, 0.86); /* 主要文本 */
+    --vp-c-text-2: rgba(235, 235, 245, 0.6); /* 次要文本 */
+    --vp-c-text-3: rgba(235, 235, 245, 0.38); /* 辅助文本 */
+
+    /**
+     * 背景色
+     * -------------------------------------------------------------------------- */
+
+    --vp-c-bg: #1b1b1f; /* 主体背景 */
+    --vp-nav-bg-color: #1b1b1f; /* 导航栏背景 */
+    --vp-nav-screen-bg-color: #1b1b1f; /* 移动端导航栏 */
+    --vp-local-nav-bg-color: #1b1b1f; /* 页面内导航栏 */
+    --vp-sidebar-bg-color: #161618; /* 侧边栏背景 */
+    --vp-code-block-bg: #202127; /* 代码块背景 */
+}

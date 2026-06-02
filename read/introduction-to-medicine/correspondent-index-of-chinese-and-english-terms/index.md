@@ -1,0 +1,297 @@
+---
+url: >-
+  /read/introduction-to-medicine/correspondent-index-of-chinese-and-english-terms/index.md
+---
+没错，医学也有 ~~黑话~~ 标准术语
+
+## 总表
+
+::: table  max-content title="中英文名词对照索引表" hl-rows="note:1,4,6,9,14,16,20,28,40,44,47,50,57,59,67,72,80,87,"
+
+| 中文名词           | 英文对照                                                   | 页码      |
+|:---------------|:-------------------------------------------------------|:--------|
+| 2000 年人人享有卫生保健 | health for all by the year 2000, HFA / 2000            | 169     |
+| 21 世纪人人享有卫生保健  | health for all in the twenty first century             | 169     |
+| **B**          |                                                        |         |
+| 濒死期            | ==agonal stage==                                       | 138     |
+| **C**          |                                                        |         |
+| 残疾             | disability                                             | 174     |
+| 初级卫生保健         | primary health care                                    | 171     |
+| **D**          |                                                        |         |
+| 蛋白质组学          | ==proteomics==                                         | 27      |
+| 第二级预防          | secondary prevention                                   | 165     |
+| 第三级预防          | ==tertiary prevention==                                | 166     |
+| 第一级预防          | primary prevention                                     | 163     |
+| **F**          |                                                        |         |
+| 分子生物学          | molecular biology                                      | 19      |
+| **G**          |                                                        |         |
+| 个体预防           | individual prevention                                  | 162     |
+| 构建人类卫生健康共同体    | global community of health for all                     | 170     |
+| 国际护士理事会        | International Council of Nurses, ICN                   | 93      |
+| **J**          |                                                        |         |
+| 机构康复           | institution - based rehabilitation, IBR                | 172     |
+| 疾病控制与预防中心      | Center for Disease Control and Prevention (CDC 或 CDCP) | 96      |
+| 家庭医生           | ==family practitioner==                                | 99      |
+| 假肢与矫形器师        | ==prosthetist and orthosis==, P\&O                      | 174     |
+| 教育康复           | educational rehabilitation                             | 172     |
+| 精准医学           | precision medicine                                     | 32      |
+| 居家康复           | home - based rehabilitation                            | 172     |
+| **K**          |                                                        |         |
+| 咖啡因            | ==caffeine==                                           | 13      |
+| 康复             | rehabilitation                                         | 172     |
+| 康复工程           | rehabilitation engineering                             | 172     |
+| 康复评定           | rehabilitation evaluation, assessment                  | 177     |
+| 康复心理学          | rehabilitation psychology                              | 178     |
+| 康复医师           | ==physiatrist==                                        | 174     |
+| 康复医学           | rehabilitation medicine                                | 173     |
+| 康复治疗           | rehabilitation treatment, rehabilitation care          | 178     |
+| 可持续发展目标        | sustainable development goals, SDGs                    | 170     |
+| 可卡因            | ==cocaine==                                            | 15      |
+| 奎宁             | ==quinine==                                            | 13      |
+| **L**          |                                                        |         |
+| 联合国千年发展目标      | ==millennium development goals, MDGs==                 | 170     |
+| 《联合国千年宣言》      | ==United Nations Millennium Declaration==              | 170     |
+| 临床死亡期          | clinical death stage                                   | 138     |
+| **M**          |                                                        |         |
+| 美国护士协会         | American Nurses Association, ANA                       | 93      |
+| 免疫系统           | immune system                                          | 26      |
+| **N**          |                                                        |         |
+| 纳米技术           | nanotechnology                                         | 29      |
+| 脑死亡            | brain death                                            | 138     |
+| **Q**          |                                                        |         |
+| 器官移植           | ==organ transplantation==                              | 26      |
+| 青蒿素            | ==artemisinin==                                        | 41      |
+| 全科医生           | general practitioner                                   | 99      |
+| 全面康复           | comprehensive rehabilitation                           | 172     |
+| 全面医学           | comprehensive medicine                                 | 173     |
+| 群体预防           | ==colony prevention==                                  | 163     |
+| **R**          |                                                        |         |
+| 人工器官           | artificial organ                                       | 21      |
+| **S**          |                                                        |         |
+| 三级预防           | preventions at three levels                            | 163     |
+| 上门康复服务         | ==out-reaching rehabilitation service, ORS==           | 172     |
+| 社会工作者          | social worker, SW                                      | 174     |
+| 社会康复           | social rehabilitation                                  | 172     |
+| 社区康复           | community - based rehabilitation, CBR                  | 172     |
+| 生物死亡期          | biological death stage                                 | 138     |
+| 失能者            | person with disability                                 | 174     |
+| **W**          |                                                        |         |
+| 卫生学            | ==hygiene==                                            | 159     |
+| 文体治疗师          | ==recreation therapist, RT==                           | 174     |
+| 物理疗法           | ==physical therapy, physiotherapy, PT==                | 179     |
+| 物理治疗师          | ==physiotherapist, PT==                                | 174     |
+| **X**          |                                                        |         |
+| 系统生物学          | systems biology                                        | 30      |
+| 系统生物医学         | system biomedicine                                     | 30      |
+| 心理治疗           | psychotherapy                                          | 179     |
+| 心理治疗师          | psychological therapist                                | 174     |
+| 《心血运动论》        | The Movement of the Heart and the Blood                | 11      |
+| 虚拟现实           | virtual reality, VR                                    | 179     |
+| 循证医学           | ==evidence-based medicine, EBM==                       | 149     |
+| **Y**          |                                                        |         |
+| 言语治疗           | speech therapy                                         | 179     |
+| 言语治疗师          | speech therapist, ST                                   | 174     |
+| 医疗康复           | ==medical rehabilitation==                             | 172     |
+| 医学模式           | medical model                                          | 21      |
+| 预防康复           | preventive rehabilitation                              | 174     |
+| 预防医学           | preventive medicine                                    | 29, 159 |
+| **Z**          |                                                        |         |
+| 再生医学           | ==regenerative medicine==                              | 28      |
+| 整体康复           | ==integral rehabilitation==                            | 174     |
+| 职业康复           | ==vocational rehabilitation==                          | 172     |
+| 治未病            | ==preventive treatment of disease==                    | 36      |
+| 中国疾病预防控制中心     | China Center for Disease Control and Prevention        | 96      |
+| 中世纪            | middle ages                                            | 9       |
+| 中医学            | traditional Chinese medicine, TCM                      | 34      |
+| 转化医学           | translational medicine                                 | 31      |
+| 作业疗法           | ==occupational therapy, OT==                           | 179     |
+| 作业治疗师          | ==occupational therapist, OT==                         | 174     |
+
+:::
+
+## B
+
+濒死期 agonal stage 138
+
+## C
+
+残疾 disability 174
+初级卫生保健 primary health care 171
+
+## D
+
+蛋白质组学 proteomics 27
+
+第二级预防 secondary prevention 165
+
+第三级预防 tertiary prevention 166
+
+第一级预防 primary prevention 163
+
+## F
+
+分子生物学 molecular biology 19
+
+## G
+
+个体预防 individual prevention 162
+
+构建人类卫生健康共同体 global community of health for all 170
+
+国际护士理事会 International Council of Nurses，ICN 93
+
+## J
+
+机构康复 institution - based rehabilitation，IBR 172
+
+疾病控制与预防中心 Center for Disease Control and Prevention，简称 CDC 或 CDCP 96
+
+家庭医生 family practitioner 99
+
+假肢与矫形器师 prosthetist and orthosis，P\&O 174
+
+教育康复 educational rehabilitation 172
+
+精准医学 precision medicine 32
+
+居家康复 home - based rehabilitation 172
+
+## K
+
+咖啡因 caffeine 13
+
+康复 rehabilitation 172
+
+康复工程 rehabilitation engineering 172
+
+康复评定 rehabilitation evaluation，assessment 177
+
+康复心理学 rehabilitation psychology 178
+
+康复医师 physiatrist 174
+
+康复医学 rehabilitation medicine 173
+
+康复治疗 rehabilitation treatment，rehabilitation care 178
+
+可持续发展目标 sustainable development goals，SDGs 170
+
+可卡因 cocaine 15
+
+奎宁 quinine 13
+
+## L
+
+联合国千年发展目标 millennium development goals，MDGs 170
+
+《联合国千年宣言》 United Nations Millennium Declaration 170
+
+临床死亡期 clinical death stage 138
+
+## M
+
+美国护士协会 American Nurses Association，ANA 93
+
+免疫系统 immune system 26
+
+## N
+
+纳米技术 nanotechnology 29
+
+脑死亡 brain death 138
+
+## Q
+
+器官移植 organ transplantation 26
+
+青蒿素 artemisinin 41
+
+全科医生 general practitioner 99
+
+全面康复 comprehensive rehabilitation 172
+
+全面医学 comprehensive medicine 173
+
+群体预防 colony prevention 163
+
+## R
+
+人工器官 artificial organ 21
+
+## S
+
+三级预防 preventions at three levels 163
+
+上门康复服务 out - reaching rehabilitation service，ORS 172
+
+社会工作者 social worker，SW 174
+
+社会康复 social rehabilitation 172
+
+社区康复 community - based rehabilitation，CBR 172
+
+生物死亡期 biological death stage 138
+
+失能者 person with disability 174
+
+## W
+
+卫生学 hygiene 159
+
+文体治疗师 recreation therapist，RT 174
+
+物理疗法 physical therapy，physiotherapy，PT 179
+
+物理治疗师 physiotherapist，PT 174
+
+## X
+
+系统生物学 systems biology 30
+
+系统生物医学 system biomedicine 30
+
+心理治疗 psychotherapy 179
+
+心理治疗师 psychological therapist 174
+
+《心血运动论》 The Movement of the Heart and the Blood 11
+
+虚拟现实 virtual reality，VR 179
+
+循证医学 evidence - based medicine，EBM
+
+## Y
+
+言语治疗 speech therapy 179
+
+言语治疗师 speech therapist，ST 174
+
+医疗康复 medical rehabilitation 172
+
+医学模式 medical model 21
+
+预防康复 preventive rehabilitation 174
+
+预防医学 preventive medicine 29，159
+
+## Z
+
+再生医学 regenerative medicine 28
+
+整体康复 integral rehabilitation 174
+
+职业康复 vocational rehabilitation 172
+
+治未病 preventive treatment of disease 36
+
+中国疾病预防控制中心 China Center for Disease Control and Prevention 96
+
+中世纪 middle ages 9
+
+中医学 traditional Chinese medicine，TCM 34
+
+转化医学 translational medicine 31
+
+作业疗法 occupational therapy，OT 179
+
+作业治疗师 occupational therapist，OT 174
