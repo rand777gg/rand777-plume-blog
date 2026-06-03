@@ -200,7 +200,7 @@ const publications = [
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Edu+NSW+ACT+Cursive:wght@400..700&family=League+Script&family=Playwrite+AU+VIC+Guides&family=Yesteryear&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -298,10 +298,11 @@ const publications = [
 }
 
 .profile-bio {
-  font-size: 0.82rem;
+  font-size: 0.83rem;
+  font-family: 'Edu NSW ACT Cursive', cursive;
   color: var(--muted);
   margin-bottom: 1rem;
-  text-align: left;
+  text-align: center;
   line-height: 1.6;
 }
 
