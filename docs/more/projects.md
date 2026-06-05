@@ -24,6 +24,14 @@ status: published
 
 </CardGrid>
 
+### react-practice-web <Badge color="#8e5cd9" bg-color="rgba(159, 122, 234, 0.16)" text="MIT" />
+
+::logos:react =1.5em::::skill-icons:typescript =1.5em::::logos:vitejs =1.5em::::logos:tailwindcss-icon =1.5em::::logos:supabase-icon =1.5em::
+
+「刷题网站」_Practice Web_ 是一个基于 React 19 + TypeScript + Supabase 的单选刷题练习平台，支持练习模式、考试模式（随机 50 题 / 60 分钟限时，刷新恢复、超时自动提交）、错题回顾（按练习/考试模式筛选）及题目管理（CRUD + CSV/JSON 批量导入）。首个注册用户自动成为管理员，界面支持中英文切换、系统深色模式自适应及移动端响应式布局。使用 Zustand 状态管理、React Router v7 懒加载路由、shadcn/ui (Radix UI) 组件库、Tailwind CSS 4 样式方案，并集成 Vite PWA 插件支持离线访问。
+
+<RepoCard repo="rand777gg/react-practice-web"></RepoCard>
+
 ### @ROS2/drivers
 
 为 机器人操作系统 2 (ROS2) 编写的一些「小驱动」。
