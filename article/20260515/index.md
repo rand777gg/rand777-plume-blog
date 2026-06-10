@@ -1,0 +1,44 @@
+---
+url: /article/20260515/index.md
+---
+## 安装 Claude Code
+
+Windows 用户可以通过 Microsoft Store 安装 Claude Code，搜索 "Claude Code" 即可找到并安装。
+
+或者打开 PowerShell，输入以下命令安装：
+
+```shell
+winget install Anthropic.ClaudeCode
+```
+
+其他系统看官网就行了。
+
+## 获取 DeepSeek API Key
+
+去 DeepSeek 官网注册账号并[获取 API Key](https://platform.deepseek.com/api_keys)，不再赘述。注意 API 不要泄露了。
+
+## 配置环境变量
+
+打开「用户目录」，就是 `C:\Users\你的用户名`，找到`.claude`目录，在此目录下创建一个名为 `settings.json` 的文件，内容如下：
+
+```json
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "你的 DeepSeek API Key，sk开头",
+    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+    "ANTHROPIC_MODEL": "deepseek-v4-pro[1m]",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "=deepseek-v4-pro[1m]",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "=deepseek-v4-pro[1m]",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "=deepseek-v4-pro[1m]",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "deepseek-v4-flash",
+    "CLAUDE_CODE_EFFORT_LEVE": "max"
+  },
+  "permissions": {
+    "allow": [],
+    "deny": []
+  },
+  "alwaysThinkingEnabled": false
+}
+```
+
+最后重启终端，输入 `claude` 显示有 `deepseek-v4-pro[1m]` 相关信息就说明配置成功了。

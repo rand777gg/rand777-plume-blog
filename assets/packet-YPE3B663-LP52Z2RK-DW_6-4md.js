@@ -1,0 +1,1 @@
+import{Fr as e}from"./common-DmvpFiQ_.js";export{e as createPacketServices};

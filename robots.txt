@@ -1,0 +1,3 @@
+Sitemap: https://www.rand777.com/sitemap.xml
+User-agent:*
+Disallow:

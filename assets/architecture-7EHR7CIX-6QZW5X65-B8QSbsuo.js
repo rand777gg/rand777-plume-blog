@@ -1,0 +1,1 @@
+import{Vr as e}from"./common-DmvpFiQ_.js";export{e as createArchitectureServices};

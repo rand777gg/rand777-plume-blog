@@ -1,0 +1,57 @@
+---
+url: /article/uw01sg5r/index.md
+---
+LaTeX 虽然强大，但语法晦涩难懂，复杂工程如「毕业设计」、「期刊论文」编译耗时较长，Typst 则是一款现代化的文档排版工具，语法简洁易学，支持实时预览，更适合写论文、报告、书籍等各种文档。
+
+最重要的是，基于 Rust 语言开发的 Typst 拥有极高的性能，编译速度快，支持跨平台使用。许多高校、组织已经开始采用 Typst 作为主要的文档排版工具，这里记录下 Typst 的日常使用指南。
+
+## 安装
+
+VS Code 打开终端，执行以下命令：
+
+```shell
+winget install --id Typst.Typst
+```
+
+## Typst 推荐插件
+
+```json
+{
+  "recommendations": [
+    "myriad-dreamin.tinymist",
+    "CalebFiggers.typst-companion",
+    "surv.typst-math",
+    "orangex4.vscode-typst-sync",
+    "orangex4.vscode-typst-sympy-calculator"
+  ]
+}
+```
+
+* typst companion
+* Tynimist Typst
+* Typst Sympy Calculator
+* Typst Sync
+* Typst Preview
+* Typst Math
+
+## 我的配置文件
+
+```json
+{
+  "[typst]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "myriad-dreamin.tinymist",
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "tinymist.completion.triggerOnSnippetPlaceholders": true,
+  "tinymist.exportPdf": "onDocumentHasTitle",
+  "tinymist.formatterMode": "typstyle",
+  "tinymist.lint.enabled": true,
+  "tinymist.outputPath": "$dir/output/$name",
+  "tinymist.preview.cursorIndicator": true,
+  "tinymist.preview.invertColors": {
+    "image": "never",
+    "rest": "auto"
+  }
+}
+```
