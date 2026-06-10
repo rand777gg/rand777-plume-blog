@@ -3,18 +3,22 @@
 </script>
 
 <template>
-<div class="about-me-card-bg vp-blog-post-item about-me-character">
-  <p class="about-me-card-title-normal">性格</p>
-  <div class="about-me-character-content">
-    <div class="about-me-character-type">
-      <p class="about-me-card-text-big about-me-card-text-color">指挥官</p>
-      <p class="about-me-card-text-big">ENTJ-A</p>
-    </div>
-    <div class="about-me-character-img">
+  <div class="about-me-card-bg vp-blog-post-item about-me-character">
+    <p class="about-me-card-title-normal">
+      性格
+    </p>
+    <div class="about-me-character-content">
+      <div class="about-me-character-type">
+        <p class="about-me-card-text-big about-me-card-text-color">
+          指挥官
+        </p>
+        <p class="about-me-card-text-big">
+          ENTJ-A
+        </p>
+      </div>
+      <div class="about-me-character-img" />
     </div>
   </div>
-
-</div>
 </template>
 
 <style scoped>

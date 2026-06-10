@@ -1,8 +1,61 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+interface SkillItem {
+  type: string
+  icon: string
+}
+
+const technology = ref<SkillItem[]>([
+  { type: 'ROS2', icon: 'skill-icons:ros-light' },
+  { type: 'Vue3', icon: 'logos:vue' },
+  { type: 'Spring', icon: 'devicon:spring' },
+  { type: 'Flask', icon: 'logos:flask' },
+  { type: 'HTML5', icon: 'logos:html-5' },
+  { type: 'CSS3', icon: 'logos:css-3' },
+  { type: 'TypeScript', icon: 'vscode-icons:file-type-typescriptdef' },
+  { type: 'Python', icon: 'logos:python' },
+  { type: 'C++', icon: 'devicon:cplusplus' },
+  { type: 'Rust', icon: 'logos:rust' },
+  { type: 'Java', icon: 'devicon:java' },
+  { type: 'Go', icon: 'logos:go' },
+  { type: 'GraphQL', icon: 'logos:graphql' },
+  { type: 'MySQL', icon: 'devicon:mysql' },
+  { type: 'PostgreSQL', icon: 'devicon:postgresql' },
+  { type: 'Redis', icon: 'devicon:redis' },
+  { type: 'MongoDB', icon: 'devicon:mongodb' },
+  { type: 'ElasticSearch', icon: 'devicon:elasticsearch' },
+  { type: 'RabbitMQ', icon: 'devicon:rabbitmq' },
+
+])
+
+// 工具
+const tools = ref<SkillItem[]>([
+  { type: 'WebStorm', icon: 'devicon:webstorm' },
+  { type: 'VSCode', icon: 'vscode-icons:file-type-vscode' },
+  { type: 'Android Studio', icon: 'devicon:androidstudio' },
+  { type: 'pnpm', icon: 'vscode-icons:file-type-light-pnpm' },
+  { type: 'npm', icon: 'logos:npm' },
+  { type: 'Vite', icon: 'devicon:vitejs' },
+  { type: 'IDEA', icon: 'logos:intellij-idea' },
+  { type: 'Git', icon: 'devicon:git' },
+  { type: 'GitHub', icon: 'devicon:github' },
+  { type: 'GitLab', icon: 'devicon:gitlab' },
+  { type: 'Docker', icon: 'devicon:docker' },
+  { type: 'Postman', icon: 'devicon:postman' },
+  { type: 'Netlify', icon: 'devicon:netlify' },
+])
+</script>
+
 <template>
   <div class="about-me-card-bg vp-blog-post-item about-me-skill">
     <div style="margin-left: 20px">
-      <p class="about-me-card-title-normal">技能</p>
-      <p class="about-me-card-text-big">我会的一点点</p>
+      <p class="about-me-card-title-normal">
+        技能
+      </p>
+      <p class="about-me-card-text-big">
+        我会的一点点
+      </p>
     </div>
     <!-- 第一行向左移动 -->
     <div class="marquee-row first-row">
@@ -20,59 +73,10 @@
     </div>
 
     <div class="about-me-skill-detail">
-      <span v-for="(item, index) in technology" :key="index"> <icon :name="item.icon" /> <span>{{item.type}}</span>  </span>
+      <span v-for="(item, index) in technology" :key="index"> <icon :name="item.icon" /> <span>{{ item.type }}</span>  </span>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-
-interface SkillItem {
-  type: string
-  icon: string
-}
-
-const technology = ref<SkillItem[]>([
-  { type: 'ROS2', icon: 'skill-icons:ros-light' },
-  { type: 'Vue3', icon: 'logos:vue' },
-  { type: 'Spring', icon: 'devicon:spring' },
-  {type: 'Flask', icon: 'logos:flask'},
-  { type: 'HTML5', icon: 'logos:html-5' },
-  { type: 'CSS3', icon: 'logos:css-3' },
-  { type: 'TypeScript', icon: 'vscode-icons:file-type-typescriptdef' },
-  { type: 'Python', icon: 'logos:python' },
-  { type: 'C++', icon: 'devicon:cplusplus' },
-  { type: 'Rust', icon: 'logos:rust' },
-  { type: 'Java', icon: 'devicon:java' },
-  { type: 'Go', icon: 'logos:go' },
-  { type: 'GraphQL', icon: 'logos:graphql' },
-  { type: 'MySQL', icon: 'devicon:mysql' },
-  { type: 'PostgreSQL', icon: 'devicon:postgresql' },
-  { type: 'Redis', icon: 'devicon:redis' },
-  { type: 'MongoDB', icon: 'devicon:mongodb' },
-  { type: 'ElasticSearch', icon: 'devicon:elasticsearch' },
-  { type: 'RabbitMQ', icon: 'devicon:rabbitmq' },
-
-]);
-
-// 工具
-const tools = ref<SkillItem[]>([
-  { type: 'WebStorm', icon: 'devicon:webstorm' },
-  { type: 'VSCode', icon: 'vscode-icons:file-type-vscode' },
-  { type: 'Android Studio', icon: 'devicon:androidstudio' },
-  { type: 'pnpm', icon: 'vscode-icons:file-type-light-pnpm' },
-  { type: 'npm', icon: 'logos:npm' },
-  { type: 'Vite', icon: 'devicon:vitejs' },
-  { type: 'IDEA', icon: 'logos:intellij-idea' },
-  { type: 'Git', icon: 'devicon:git' },
-  { type: 'GitHub', icon: 'devicon:github' },
-  { type: 'GitLab', icon: 'devicon:gitlab' },
-  { type: 'Docker', icon: 'devicon:docker' },
-  { type: 'Postman', icon: 'devicon:postman' },
-  { type: 'Netlify', icon: 'devicon:netlify' },
-]);
-</script>
 
 <style scoped>
 .about-me-skill{

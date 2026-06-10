@@ -1,104 +1,6 @@
-<!--suppress CssUnresolvedCustomProperty -->
-<template>
-  <transition name="fade-scale">
-    <div v-if="visible" class="bookshelf" :style="{'--accent': accent }">
-      <!-- Shelves -->
-      <div :class="['shelf-rows', `layout-${layout}`]">
-        <template v-for="(book, idx) in visibleBooks" :key="book.id ?? idx">
-          <button
-              class="book"
-              :class="{ 'is-hovered': hoveredId === (book.id ?? idx) }"
-              @mouseenter="hoveredId = (book.id ?? idx)"
-              @mouseleave="hoveredId = null"
-              @mousemove="onMouseMove($event)"
-              @click="openDetail(book)"
-              :aria-label="`查看 ${book.title} 的详情`"
-          >
-            <!-- 3D Cover -->
-            <div class="book-3d" :style="bookStyle(book)">
-              <img class="cover" :src="book.cover" :alt="`${book.title} 封面`"/>
-              <div class="spine" :title="`${book.title}｜${book.author}`">{{
-                  shortTitle(book.title)
-                }}
-              </div>
-              <div class="shine"/>
-            </div>
-
-            <!-- Quick info on hover -->
-            <transition name="fade">
-              <div v-if="hoveredId === (book.id ?? idx)" class="hover-card" role="tooltip">
-                <div class="title" :title="book.title">{{ book.title }}</div>
-                <div class="author">{{ book.author }}</div>
-                <div class="meta">
-                  <span v-if="book.year">{{ book.year }}</span>
-                  <span v-if="book.pages"> · {{ book.pages }} 页 </span>
-                </div>
-                <div class="rating" v-if="book.rating">
-                  <span v-for="n in 5" :key="n" class="star"
-                        :class="{ on: n <= Math.round(book.rating) }">★</span>
-                  <span class="score">{{ book.rating.toFixed(1) }}</span>
-                </div>
-              </div>
-            </transition>
-          </button>
-        </template>
-
-        <!-- Empty state -->
-        <div v-if="visibleBooks.length === 0" class="empty"> 没有匹配的图书</div>
-      </div>
-
-      <!-- Detail Drawer -->
-      <transition name="drawer">
-        <div
-            v-if="detail"
-            class="drawer-backdrop"
-            role="dialog"
-            aria-modal="true"
-            aria-label="图书详情"
-            @click.self="detail = null"
-        >
-          <aside class="drawer">
-            <button class="close" @click="detail = null" aria-label="关闭">×</button>
-            <div class="drawer-body">
-              <img class="drawer-cover" :src="detail.cover" :alt="`${detail.title} 封面`"/>
-              <div class="drawer-info">
-                <h2 class="drawer-title">{{ detail.title }}</h2>
-                <div class="drawer-author">{{ detail.author }}</div>
-                <div class="drawer-meta">
-                  <span v-if="detail.year"> 出版：{{ detail.year }}</span>
-                  <span v-if="detail.pages"> · {{ detail.pages }} 页 </span>
-                  <span v-if="detail.isbn"> · ISBN：{{ detail.isbn }}</span>
-                </div>
-                <div v-if="detail.tags?.length" class="tags">
-                  <span v-for="tag in detail.tags" :key="tag" class="tag">#{{ tag }}</span>
-                </div>
-                <p v-if="detail.description" class="desc">{{ detail.description }}</p>
-                <div class="drawer-actions">
-                  <button
-                      class="btn"
-                      @click="handleSelect(detail)"
-                  >
-                    选择此书
-                  </button>
-                  <a class="btn secondary" v-if="detail.link" :href="detail.link" target="_blank"
-                     rel="noopener">
-                    更多信息
-                  </a>
-                </div>
-
-              </div>
-            </div>
-          </aside>
-        </div>
-      </transition>
-
-
-    </div>
-  </transition>
-</template>
-
+<!-- suppress CssUnresolvedCustomProperty -->
 <script setup lang="ts">
-import {computed, onMounted, ref} from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
 export interface BookItem {
   id?: string | number
@@ -122,6 +24,10 @@ const props = defineProps<{
   accent?: string
 }>()
 
+const emit = defineEmits<{
+  (e: 'select', book: BookItem): void
+}>()
+
 const visible = ref(false)
 
 onMounted(() => {
@@ -130,10 +36,6 @@ onMounted(() => {
     visible.value = true
   }, 100)
 })
-
-const emit = defineEmits<{
-  (e: 'select', book: BookItem): void
-}>()
 
 const accent = computed(() => props.accent ?? '#2f6fef')
 
@@ -145,23 +47,26 @@ const detail = ref<BookItem | null>(null)
 
 const visibleBooks = computed(() => {
   const q = query.value.trim().toLowerCase()
-  const filtered = props.books.filter((b) =>
-      !q || b.title.toLowerCase().includes(q) || b.author.toLowerCase().includes(q)
+  const filtered = props.books.filter(b =>
+    !q || b.title.toLowerCase().includes(q) || b.author.toLowerCase().includes(q),
   )
   return [...filtered].sort((a, b) => {
     const key = sortKey.value
-    if (key === 'rating') return (b.rating ?? 0) - (a.rating ?? 0)
-    if (key === 'year') return (b.year ?? 0) - (a.year ?? 0)
+    if (key === 'rating')
+      return (b.rating ?? 0) - (a.rating ?? 0)
+    if (key === 'year')
+      return (b.year ?? 0) - (a.year ?? 0)
     return String(a[key] ?? '').localeCompare(String(b[key] ?? ''))
   })
 })
 
 function shortTitle(title: string, max = 24) {
-  return title.length > max ? title.slice(0, max - 1) + '…' : title
+  return title.length > max ? `${title.slice(0, max - 1)}…` : title
 }
 
 // parallax
-let mouseX = 0, mouseY = 0
+let mouseX = 0
+let mouseY = 0
 
 function onMouseMove(e: MouseEvent) {
   const rect = (e.currentTarget as HTMLElement).getBoundingClientRect()
@@ -175,7 +80,7 @@ function bookStyle(book: BookItem) {
   return {
     '--book-base': base,
     '--book-highlight': highlight,
-    transform: `rotateY(${mouseX * 8}deg)rotateX(${-mouseY * 6}deg)`,
+    'transform': `rotateY(${mouseX * 8}deg)rotateX(${-mouseY * 6}deg)`,
   } as Record<string, string>
 }
 
@@ -187,12 +92,126 @@ function openDetail(b: BookItem) {
 function handleSelect(book: BookItem) {
   if (book.target) {
     window.open(book.target, '_self') // 跳转到 target
-  } else {
+  }
+  else {
     emit('select', book)
   }
 }
-
 </script>
+
+<template>
+  <transition name="fade-scale">
+    <div v-if="visible" class="bookshelf" :style="{ '--accent': accent }">
+      <!-- Shelves -->
+      <div class="shelf-rows" :class="[`layout-${layout}`]">
+        <template v-for="(book, idx) in visibleBooks" :key="book.id ?? idx">
+          <button
+            class="book"
+            :class="{ 'is-hovered': hoveredId === (book.id ?? idx) }"
+            :aria-label="`查看 ${book.title} 的详情`"
+            @mouseenter="hoveredId = (book.id ?? idx)"
+            @mouseleave="hoveredId = null"
+            @mousemove="onMouseMove($event)"
+            @click="openDetail(book)"
+          >
+            <!-- 3D Cover -->
+            <div class="book-3d" :style="bookStyle(book)">
+              <img class="cover" :src="book.cover" :alt="`${book.title} 封面`">
+              <div class="spine" :title="`${book.title}｜${book.author}`">
+                {{
+                  shortTitle(book.title)
+                }}
+              </div>
+              <div class="shine" />
+            </div>
+
+            <!-- Quick info on hover -->
+            <transition name="fade">
+              <div v-if="hoveredId === (book.id ?? idx)" class="hover-card" role="tooltip">
+                <div class="title" :title="book.title">
+                  {{ book.title }}
+                </div>
+                <div class="author">
+                  {{ book.author }}
+                </div>
+                <div class="meta">
+                  <span v-if="book.year">{{ book.year }}</span>
+                  <span v-if="book.pages"> · {{ book.pages }} 页 </span>
+                </div>
+                <div v-if="book.rating" class="rating">
+                  <span
+                    v-for="n in 5" :key="n" class="star"
+                    :class="{ on: n <= Math.round(book.rating) }"
+                  >★</span>
+                  <span class="score">{{ book.rating.toFixed(1) }}</span>
+                </div>
+              </div>
+            </transition>
+          </button>
+        </template>
+
+        <!-- Empty state -->
+        <div v-if="visibleBooks.length === 0" class="empty">
+          没有匹配的图书
+        </div>
+      </div>
+
+      <!-- Detail Drawer -->
+      <transition name="drawer">
+        <div
+          v-if="detail"
+          class="drawer-backdrop"
+          role="dialog"
+          aria-modal="true"
+          aria-label="图书详情"
+          @click.self="detail = null"
+        >
+          <aside class="drawer">
+            <button class="close" aria-label="关闭" @click="detail = null">
+              ×
+            </button>
+            <div class="drawer-body">
+              <img class="drawer-cover" :src="detail.cover" :alt="`${detail.title} 封面`">
+              <div class="drawer-info">
+                <h2 class="drawer-title">
+                  {{ detail.title }}
+                </h2>
+                <div class="drawer-author">
+                  {{ detail.author }}
+                </div>
+                <div class="drawer-meta">
+                  <span v-if="detail.year"> 出版：{{ detail.year }}</span>
+                  <span v-if="detail.pages"> · {{ detail.pages }} 页 </span>
+                  <span v-if="detail.isbn"> · ISBN：{{ detail.isbn }}</span>
+                </div>
+                <div v-if="detail.tags?.length" class="tags">
+                  <span v-for="tag in detail.tags" :key="tag" class="tag">#{{ tag }}</span>
+                </div>
+                <p v-if="detail.description" class="desc">
+                  {{ detail.description }}
+                </p>
+                <div class="drawer-actions">
+                  <button
+                    class="btn"
+                    @click="handleSelect(detail)"
+                  >
+                    选择此书
+                  </button>
+                  <a
+                    v-if="detail.link" class="btn secondary" :href="detail.link" target="_blank"
+                    rel="noopener"
+                  >
+                    更多信息
+                  </a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </transition>
+    </div>
+  </transition>
+</template>
 
 <style scoped>
 .fade-scale-enter-active,
@@ -205,8 +224,6 @@ function handleSelect(book: BookItem) {
   opacity: 0;
   transform: scale(0.96);
 }
-
-
 
 /* Toolbar */
 .shelf-toolbar {
@@ -583,8 +600,3 @@ function handleSelect(book: BookItem) {
   }
 }
 </style>
-
-
-
-
-

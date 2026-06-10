@@ -1,10 +1,3 @@
-<template>
-  <div class="article-status" v-if="status">
-    <span class="dot" :class="status"></span>
-    <span class="label">{{ statusText[status] }}</span>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { usePageFrontmatter } from 'vuepress/client'
 
@@ -16,9 +9,16 @@ const statusText: Record<string, string> = {
   writing: '本文编写中',
   optimizing: '本文需要优化',
   published: '已发布',
-  archived: '已存档'
+  archived: '已存档',
 }
 </script>
+
+<template>
+  <div v-if="status" class="article-status">
+    <span class="dot" :class="status" />
+    <span class="label">{{ statusText[status] }}</span>
+  </div>
+</template>
 
 <style scoped>
 .article-status {

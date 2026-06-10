@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import * as echarts from 'echarts';
+import * as echarts from 'echarts'
 
-var chartDom = document.getElementById('main');
-var myChart = echarts.init(chartDom);
-var option;
+const chartDom = document.getElementById('main')
+const myChart = echarts.init(chartDom)
 
-const dataAll = [
+const dataAll: number[][][] = [
   [
     [10.0, 8.04],
     [8.0, 6.95],
@@ -17,7 +16,7 @@ const dataAll = [
     [4.0, 4.26],
     [12.0, 10.84],
     [7.0, 4.82],
-    [5.0, 5.68]
+    [5.0, 5.68],
   ],
   [
     [10.0, 9.14],
@@ -30,7 +29,7 @@ const dataAll = [
     [4.0, 3.1],
     [12.0, 9.13],
     [7.0, 7.26],
-    [5.0, 4.74]
+    [5.0, 4.74],
   ],
   [
     [10.0, 7.46],
@@ -43,7 +42,7 @@ const dataAll = [
     [4.0, 5.39],
     [12.0, 8.15],
     [7.0, 6.42],
-    [5.0, 5.73]
+    [5.0, 5.73],
   ],
   [
     [8.0, 6.58],
@@ -56,60 +55,60 @@ const dataAll = [
     [19.0, 12.5],
     [8.0, 5.56],
     [8.0, 7.91],
-    [8.0, 6.89]
-  ]
-];
+    [8.0, 6.89],
+  ],
+]
 const markLineOpt = {
   animation: false,
   label: {
     formatter: 'y = 0.5 * x + 3',
-    align: 'right'
+    align: 'right',
   },
   lineStyle: {
-    type: 'solid'
+    type: 'solid',
   },
   tooltip: {
-    formatter: 'y = 0.5 * x + 3'
+    formatter: 'y = 0.5 * x + 3',
   },
   data: [
     [
       {
         coord: [0, 3],
-        symbol: 'none'
+        symbol: 'none',
       },
       {
         coord: [20, 13],
-        symbol: 'none'
-      }
-    ]
-  ]
-};
-option = {
+        symbol: 'none',
+      },
+    ],
+  ],
+}
+const option = {
   title: {
-    text: "Anscombe's quartet",
+    text: 'Anscombe\'s quartet',
     left: 'center',
-    top: 0
+    top: 0,
   },
   grid: [
     { left: '7%', top: '7%', width: '38%', height: '38%' },
     { right: '7%', top: '7%', width: '38%', height: '38%' },
     { left: '7%', bottom: '7%', width: '38%', height: '38%' },
-    { right: '7%', bottom: '7%', width: '38%', height: '38%' }
+    { right: '7%', bottom: '7%', width: '38%', height: '38%' },
   ],
   tooltip: {
-    formatter: 'Group {a}: ({c})'
+    formatter: 'Group {a}: ({c})',
   },
   xAxis: [
     { gridIndex: 0, min: 0, max: 20 },
     { gridIndex: 1, min: 0, max: 20 },
     { gridIndex: 2, min: 0, max: 20 },
-    { gridIndex: 3, min: 0, max: 20 }
+    { gridIndex: 3, min: 0, max: 20 },
   ],
   yAxis: [
     { gridIndex: 0, min: 0, max: 15 },
     { gridIndex: 1, min: 0, max: 15 },
     { gridIndex: 2, min: 0, max: 15 },
-    { gridIndex: 3, min: 0, max: 15 }
+    { gridIndex: 3, min: 0, max: 15 },
   ],
   series: [
     {
@@ -118,7 +117,7 @@ option = {
       xAxisIndex: 0,
       yAxisIndex: 0,
       data: dataAll[0],
-      markLine: markLineOpt
+      markLine: markLineOpt,
     },
     {
       name: 'II',
@@ -126,7 +125,7 @@ option = {
       xAxisIndex: 1,
       yAxisIndex: 1,
       data: dataAll[1],
-      markLine: markLineOpt
+      markLine: markLineOpt,
     },
     {
       name: 'III',
@@ -134,7 +133,7 @@ option = {
       xAxisIndex: 2,
       yAxisIndex: 2,
       data: dataAll[2],
-      markLine: markLineOpt
+      markLine: markLineOpt,
     },
     {
       name: 'IV',
@@ -142,19 +141,16 @@ option = {
       xAxisIndex: 3,
       yAxisIndex: 3,
       data: dataAll[3],
-      markLine: markLineOpt
-    }
-  ]
-};
+      markLine: markLineOpt,
+    },
+  ],
+}
 
-option && myChart.setOption(option);
-
+option && myChart.setOption(option)
 </script>
 
 <template>
-  <div class="about-me-card-bg vp-blog-post-item about-me-friends">
-
-  </div>
+  <div class="about-me-card-bg vp-blog-post-item about-me-friends" />
 </template>
 
 <style scoped>

@@ -1,134 +1,4 @@
-<template>
-  <div class="page">
-    <main class="layout">
-      <!-- Left sidebar -->
-      <aside class="sidebar">
-        <div class="profile-card glass">
-          <div class="avatar-wrap">
-            <img
-                class="avatar"
-                src="https://luost.me/academic-homepage/assets/images/photos/portrait.jpg"
-                alt="Portrait"
-            />
-          </div>
-          <h1 class="profile-name">Jiaqiang Wang</h1>
-<!--          <p class="profile-title">-->
-<!--            Postgraduate at Tsinghua University<br />-->
-<!--          </p>-->
-          <p class="profile-bio">
-            Miss occurs whilst glittering stars wandering.
-          </p>
-          <div class="contact-links">
-            <a href="#" target="_blank" title="Google Scholar">
-              <icon name="academicons:google-scholar" size="2em"/>
-            </a>
-            <a href="#" target="_blank" title="ORCID">
-              <icon name="simple-icons:orcid" size="2em"/>
-            </a>
-            <a href="mailto:hi@rand777.com">
-              <icon name="ic:baseline-email" size="2em"/>
-            </a>
-            <a href="https://github.com/rand777gg" target="_blank" title="GitHub">
-              <icon name="mdi:github" size="2em"/>
-            </a>
-            <a href="https://cv.rand777.com" target="_blank" title="Curriculum Vitae">
-              <icon name="academicons:cv" size="2em"/>
-            </a>
-            <a href="#" target="_blank" title="npmjs">
-              <icon name="pixel:npm" size="2em"/>
-            </a>
-          </div>
-        </div>
-
-
-      </aside>
-
-      <!-- Right content -->
-      <div class="content">
-        <!-- Education -->
-        <section class="content-section glass">
-          <h6 class="section-label">Education</h6>
-          <ul class="edu-list">
-            <li v-for="edu in education" :key="edu.school" class="edu-item">
-              <img :src="edu.logo" :alt="edu.school" class="edu-logo" />
-              <div class="edu-info">
-                <strong>{{ edu.school }}</strong>
-                <div class="edu-meta">
-                  <span class="edu-degree">{{ edu.degree }}</span>
-                  <em class="edu-period">{{ edu.period }}</em>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Honors -->
-        <section class="content-section glass">
-          <h6 class="section-label">Honors &amp; Awards</h6>
-          <ul class="award-list">
-            <li v-for="award in awards" :key="award.name" class="award-item">
-              <span class="award-name">{{ award.name }}</span>
-              <em class="award-year">{{ award.year }}</em>
-            </li>
-          </ul>
-        </section>
-<!--         News-->
-<!--        <section class="content-section glass">-->
-<!--          <h6 class="section-label">News</h6>-->
-<!--          <div v-for="group in newsGroups" :key="group.year" class="news-year-group">-->
-<!--            <div class="news-year">{{ group.year }}</div>-->
-<!--            <ul class="news-list">-->
-<!--              <li v-for="item in group.items" :key="item.title" class="news-item">-->
-<!--                <div class="news-body">-->
-<!--                  <span class="news-title" v-html="item.title"></span>-->
-<!--                  <a v-if="item.link" :href="item.link" class="news-readmore">Read more</a>-->
-<!--                </div>-->
-<!--                <span class="news-date">{{ item.date }}</span>-->
-<!--              </li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </section>-->
-
-        <!-- Publications -->
-        <section class="content-section glass">
-          <h6 class="section-label">
-            Selected Publications
-            <a href="#" class="view-all">(view all)</a>
-          </h6>
-          <div class="pub-list">
-            <article v-for="pub in publications" :key="pub.title" class="pub-item">
-              <img v-if="pub.image" :src="pub.image" :alt="pub.title" class="pub-img" />
-              <div class="pub-body">
-                <h5 class="pub-title">{{ pub.title }}</h5>
-                <p class="pub-authors" v-html="pub.authors"></p>
-                <p class="pub-venue">
-                  <em>{{ pub.venue }}</em> {{ pub.year }}
-                  <span v-if="pub.badge" class="pub-badge">{{ pub.badge }}</span>
-                </p>
-                <p class="pub-tldr">{{ pub.tldr }}</p>
-                <div class="pub-links">
-                  <a
-                      v-for="link in pub.links"
-                      :key="link.label"
-                      :href="link.url"
-                      target="_blank"
-                      class="pub-link"
-                  >[{{ link.label }}]</a>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="all-pubs-link">
-            <a href="#">All publications</a>
-          </div>
-        </section>
-      </div>
-    </main>
-  </div>
-</template>
-
 <script setup lang="ts">
-
 const education = [
   {
     school: 'Chongqing Medical University',
@@ -198,6 +68,143 @@ const publications = [
   },
 ]
 </script>
+
+<template>
+  <div class="page">
+    <main class="layout">
+      <!-- Left sidebar -->
+      <aside class="sidebar">
+        <div class="profile-card glass">
+          <div class="avatar-wrap">
+            <img
+              class="avatar"
+              src="https://luost.me/academic-homepage/assets/images/photos/portrait.jpg"
+              alt="Portrait"
+            >
+          </div>
+          <h1 class="profile-name">
+            Jiaqiang Wang
+          </h1>
+          <!--          <p class="profile-title"> -->
+          <!--            Postgraduate at Tsinghua University<br /> -->
+          <!--          </p> -->
+          <p class="profile-bio">
+            Miss occurs whilst glittering stars wandering.
+          </p>
+          <div class="contact-links">
+            <a href="#" target="_blank" title="Google Scholar">
+              <icon name="academicons:google-scholar" size="2em" />
+            </a>
+            <a href="#" target="_blank" title="ORCID">
+              <icon name="simple-icons:orcid" size="2em" />
+            </a>
+            <a href="mailto:hi@rand777.com">
+              <icon name="ic:baseline-email" size="2em" />
+            </a>
+            <a href="https://github.com/rand777gg" target="_blank" title="GitHub">
+              <icon name="mdi:github" size="2em" />
+            </a>
+            <a href="https://cv.rand777.com" target="_blank" title="Curriculum Vitae">
+              <icon name="academicons:cv" size="2em" />
+            </a>
+            <a href="#" target="_blank" title="npmjs">
+              <icon name="pixel:npm" size="2em" />
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right content -->
+      <div class="content">
+        <!-- Education -->
+        <section class="content-section glass">
+          <h6 class="section-label">
+            Education
+          </h6>
+          <ul class="edu-list">
+            <li v-for="edu in education" :key="edu.school" class="edu-item">
+              <img :src="edu.logo" :alt="edu.school" class="edu-logo">
+              <div class="edu-info">
+                <strong>{{ edu.school }}</strong>
+                <div class="edu-meta">
+                  <span class="edu-degree">{{ edu.degree }}</span>
+                  <em class="edu-period">{{ edu.period }}</em>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Honors -->
+        <section class="content-section glass">
+          <h6 class="section-label">
+            Honors &amp; Awards
+          </h6>
+          <ul class="award-list">
+            <li v-for="award in awards" :key="award.name" class="award-item">
+              <span class="award-name">{{ award.name }}</span>
+              <em class="award-year">{{ award.year }}</em>
+            </li>
+          </ul>
+        </section>
+        <!--         News -->
+        <!--        <section class="content-section glass"> -->
+        <!--          <h6 class="section-label">News</h6> -->
+        <!--          <div v-for="group in newsGroups" :key="group.year" class="news-year-group"> -->
+        <!--            <div class="news-year">{{ group.year }}</div> -->
+        <!--            <ul class="news-list"> -->
+        <!--              <li v-for="item in group.items" :key="item.title" class="news-item"> -->
+        <!--                <div class="news-body"> -->
+        <!--                  <span class="news-title" v-html="item.title"></span> -->
+        <!--                  <a v-if="item.link" :href="item.link" class="news-readmore">Read more</a> -->
+        <!--                </div> -->
+        <!--                <span class="news-date">{{ item.date }}</span> -->
+        <!--              </li> -->
+        <!--            </ul> -->
+        <!--          </div> -->
+        <!--        </section> -->
+
+        <!-- Publications -->
+        <section class="content-section glass">
+          <h6 class="section-label">
+            Selected Publications
+            <a href="#" class="view-all">(view all)</a>
+          </h6>
+          <div class="pub-list">
+            <article v-for="pub in publications" :key="pub.title" class="pub-item">
+              <img v-if="pub.image" :src="pub.image" :alt="pub.title" class="pub-img">
+              <div class="pub-body">
+                <h5 class="pub-title">
+                  {{ pub.title }}
+                </h5>
+                <p class="pub-authors" v-html="pub.authors" />
+                <p class="pub-venue">
+                  <em>{{ pub.venue }}</em> {{ pub.year }}
+                  <span v-if="pub.badge" class="pub-badge">{{ pub.badge }}</span>
+                </p>
+                <p class="pub-tldr">
+                  {{ pub.tldr }}
+                </p>
+                <div class="pub-links">
+                  <a
+                    v-for="link in pub.links"
+                    :key="link.label"
+                    :href="link.url"
+                    target="_blank"
+                    class="pub-link"
+                  >[{{ link.label }}]</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="all-pubs-link">
+            <a href="#">All publications</a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Edu+NSW+ACT+Cursive:wght@400..700&family=League+Script&family=Playwrite+AU+VIC+Guides&family=Yesteryear&display=swap');

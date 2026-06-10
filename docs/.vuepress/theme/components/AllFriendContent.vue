@@ -4,8 +4,10 @@ import FRIENDS from '../data/friends.json'
 
 <template>
   <div class="friends-content">
-    <a :href="item.link" target="_blank" class="vp-blog-post-item friend-item" v-for="(item, index) in FRIENDS"
-       :key="index">
+    <a
+      v-for="(item, index) in FRIENDS" :key="index" :href="item.link" target="_blank"
+      class="vp-blog-post-item friend-item"
+    >
       <img :src="item.avatar" alt="头像">
       <div>
         <p class="friend-item-name">{{ item.name }}</p>
@@ -21,12 +23,12 @@ import FRIENDS from '../data/friends.json'
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
   padding: 8px 0;
-  
+
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 12px;
   }
-  
+
   @media screen and (max-width: 480px) {
     gap: 8px;
     padding: 4px 0;
@@ -35,7 +37,7 @@ import FRIENDS from '../data/friends.json'
   > a {
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
+
     &:hover {
       transform: translateY(-2px);
     }
@@ -52,13 +54,13 @@ import FRIENDS from '../data/friends.json'
   gap: 16px;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  
+
   &:hover {
     border-color: var(--vp-c-brand-1);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     background-color: var(--vp-c-bg-soft);
   }
-  
+
   &:active {
     transform: scale(0.98);
   }
@@ -70,13 +72,13 @@ import FRIENDS from '../data/friends.json'
     flex-shrink: 0;
     object-fit: cover;
     transition: transform 0.3s ease;
-    
+
     @media screen and (max-width: 480px) {
       width: 56px;
       height: 56px;
     }
   }
-  
+
   &:hover > img {
     transform: scale(1.05);
   }
@@ -100,7 +102,7 @@ import FRIENDS from '../data/friends.json'
   line-height: 1.4;
   margin: 0;
   transition: color 0.2s ease;
-  
+
   @media screen and (max-width: 480px) {
     font-size: 15px;
   }
@@ -120,7 +122,7 @@ import FRIENDS from '../data/friends.json'
   margin: 0;
   opacity: 0.8;
   transition: opacity 0.2s ease;
-  
+
   @media screen and (max-width: 480px) {
     font-size: 13px;
   }

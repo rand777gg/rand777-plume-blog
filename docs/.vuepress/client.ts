@@ -1,24 +1,25 @@
 import type { ClientConfig } from 'vuepress/client'
-import { defineClientConfig } from 'vuepress/client'
-import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
-import PageContextMenu from 'vuepress-theme-plume/features/PageContextMenu.vue'
-import { Layout } from 'vuepress-theme-plume/client'
 import { h } from 'vue'
-import './theme/styles/index.css'
-import AllFriendContent from './theme/components/AllFriendContent.vue'
-import Bookshelf from './theme/components/Bookshelf.vue'
-import BookIndex from './theme/components/BookIndex.vue'
-import Custom from './theme/components/Custom.vue'
+import { Layout } from 'vuepress-theme-plume/client'
+import PageContextMenu from 'vuepress-theme-plume/features/PageContextMenu.vue'
+import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
+import { defineClientConfig } from 'vuepress/client'
+import Academy from './theme/components/Academy.vue'
 import AdjustPageStyle from './theme/components/AdjustPageStyle.vue'
-import Declaration from './theme/components/Declaration.vue'
+import AllFriendContent from './theme/components/AllFriendContent.vue'
 import ArticleReadStats from './theme/components/ArticleReadStats.vue'
 import ArticleWriteStatus from './theme/components/ArticleWriteStatus.vue'
-import Academy from './theme/components/Academy.vue'
+import BookIndex from './theme/components/BookIndex.vue'
+import Bookshelf from './theme/components/Bookshelf.vue'
+import Custom from './theme/components/Custom.vue'
+import Declaration from './theme/components/Declaration.vue'
+import './theme/styles/index.css'
 import './theme/styles/custom.css'
 
 export default defineClientConfig({
   enhance({ app }) {
-    if (typeof window !== 'undefined') window.__echartsGlReady = import('echarts-gl')
+    if (typeof window !== 'undefined')
+      window.__echartsGlReady = import('echarts-gl')
     app.component('RepoCard', RepoCard)
     app.component('Custom', Custom)
     app.component('AllFriendContent', AllFriendContent)
