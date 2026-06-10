@@ -2,6 +2,7 @@
   "name": "rand777-blog-plume",
   "type": "module",
   "description": "rand777's blog.",
+  "packageManager": "pnpm@10.30.3",
   "author": "rand777",
   "scripts": {
     "docs:dev": "vuepress dev docs",
