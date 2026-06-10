@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import * as echarts from 'echarts';
 
 var chartDom = document.getElementById('main');

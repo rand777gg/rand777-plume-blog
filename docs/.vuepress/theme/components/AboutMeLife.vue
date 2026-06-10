@@ -8,13 +8,18 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {ref, onMounted} from 'vue';
 import * as echarts from 'echarts';
 
-const chartRef = ref(null);
+const chartRef = ref<HTMLElement | null>(null);
 
-const lifeData = [
+interface LifeItem {
+  name: string
+  value: string
+}
+
+const lifeData: LifeItem[] = [
   {name: '学习', value: (0.3).toFixed(2)},
   {name: '游戏', value: (0.1).toFixed(2)},
   {name: '阅读', value: (0.15).toFixed(2)},

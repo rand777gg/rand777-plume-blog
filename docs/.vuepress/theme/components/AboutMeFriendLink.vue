@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import FRIENDS from '../data/friends.json'
 </script>
 

@@ -5,13 +5,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { usePageFrontmatter } from 'vuepress/client'
 
-const frontmatter = usePageFrontmatter()
+const frontmatter = usePageFrontmatter<{ status?: string }>()
 const status = frontmatter.value.status || null
 
-const statusText = {
+const statusText: Record<string, string> = {
   draft: '这是一篇草稿',
   writing: '本文编写中',
   optimizing: '本文需要优化',

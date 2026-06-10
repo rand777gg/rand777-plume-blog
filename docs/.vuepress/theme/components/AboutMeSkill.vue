@@ -25,10 +25,15 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 
-const technology = ref([
+interface SkillItem {
+  type: string
+  icon: string
+}
+
+const technology = ref<SkillItem[]>([
   { type: 'ROS2', icon: 'skill-icons:ros-light' },
   { type: 'Vue3', icon: 'logos:vue' },
   { type: 'Spring', icon: 'devicon:spring' },
@@ -52,7 +57,7 @@ const technology = ref([
 ]);
 
 // 工具
-const tools = ref([
+const tools = ref<SkillItem[]>([
   { type: 'WebStorm', icon: 'devicon:webstorm' },
   { type: 'VSCode', icon: 'vscode-icons:file-type-vscode' },
   { type: 'Android Studio', icon: 'devicon:androidstudio' },
