@@ -76,3 +76,91 @@ pnpm run docs:dev
 ### 自定义卡片宽度
 
 卡片宽度在卡片组件的父 `div` 中使用 `class` 进行更改，`grid-row-1` 为一个卡片铺满一行，`grid-row-1-1` 为两个卡片 1:1 行排, `grid-row-3-2` 为两个卡片 3:2 行排, 你可以在 `Custom.vue` 的 `style` 中写更多的布局方式，随意组合卡片。
+
+## 代码检查（Lint）
+
+本项目配置了 ESLint + Stylelint + Markdownlint + Commitlint，提交前建议运行：
+
+```bash
+pnpm lint              # 全量检查（ESLint + Stylelint + Markdownlint）
+pnpm lint:fix          # 自动修复格式问题（ESLint + Stylelint，不含 Markdown）
+```
+
+### ESLint — 检查 .ts / .vue 中的脚本
+
+```bash
+pnpm lint:eslint       # 检查
+pnpm lint:eslint --fix # 自动修复
+```
+
+| 常见报错 | 含义 | 解决 |
+|----------|------|------|
+| `Strings must use singlequote` | 字符串应使用单引号 | 改成单引号，或 `--fix` |
+| `Extra semicolon` | 多了分号 | 删掉分号，或 `--fix` |
+| `Missing trailing comma` | 缺少尾逗号 | 加上尾逗号，或 `--fix` |
+| `Expected indentation of N spaces` | 缩进不对 | 统一 2 空格缩进，或 `--fix` |
+| `'xxx' is defined but never used` | 定义了变量但未使用 | 删除或前缀 `_` 表示故意不用 |
+| `Import order` | import 顺序不规范 | `--fix` 自动排序 |
+
+### Stylelint — 检查 .css / .vue 中的样式
+
+```bash
+pnpm lint:css          # 检查
+pnpm lint:css --fix    # 自动修复
+```
+
+| 常见报错 | 含义 | 解决 |
+|----------|------|------|
+| `Expected indentation` | CSS 缩进不对 | `--fix` 自动修复 |
+| `Expected empty line before rule` | 规则前缺空行 | `--fix` 自动修复 |
+| `Unexpected vendor prefix` | 不需要的浏览器前缀 | `--fix` 自动删除 |
+
+### Markdownlint — 检查 .md 文章
+
+```bash
+pnpm lint:md           # 检查（需手动修复）
+```
+
+| 常见报错 | 含义 | 解决 |
+|----------|------|------|
+| `MD009/no-trailing-spaces` | 行末有多余空格 | 删除行末空格 |
+| `MD010/no-hard-tabs` | 用了 Tab 缩进 | 换成 2 空格 |
+| `MD012/no-multiple-blanks` | 连续多个空行 | 只保留一个空行 |
+| `MD022/blanks-around-headings` | 标题上下需要空行 | `## 标题` 前后各加一个空行 |
+| `MD031/blanks-around-fences` | 代码块上下需要空行 | \`\`\` 前后各加一个空行 |
+| `MD032/blanks-around-lists` | 列表上下需要空行 | 列表前后各加一个空行 |
+| `MD038/no-space-in-code` | 行内代码多余空格 | \` \`code\` \` 改成 \`\`code\`\` |
+| `MD047/single-trailing-newline` | 文件末尾不是单个换行 | 文件末尾保证一个换行 |
+
+### 提交规范（Commitlint）
+
+提交信息必须遵循以下格式（`husky` 会在 `git commit` 时自动检查）：
+
+```
+<type>: <描述>
+
+feat: 添加新功能
+fix: 修复某个 bug
+docs: 更新文档
+chore: 升级依赖 / 配置文件
+refactor: 重构代码
+style: 格式化代码
+```
+
+**会被拦截的提交：**
+
+```
+更新代码          ❌ 缺少 type:
+修复bug          ❌ 缺少冒号后空格
+Fix bug          ❌ type 必须全小写
+```
+
+## CI / CD
+
+### Lint 检查（lint.yaml）
+
+push 到 master 或提 Pull Request 时，GitHub Actions 自动运行 ESLint + Stylelint + Markdownlint。
+
+### 自动部署（gh-pages.yml）
+
+push 到 master 时自动构建 `pnpm docs:build` 并部署到 `gh-pages` 分支，推送至 EdgeOne CDN。
