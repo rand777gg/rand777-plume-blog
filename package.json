@@ -7,6 +7,8 @@
     "docs:dev": "vuepress dev docs",
     "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
     "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "lint": "eslint docs/.vuepress/",
+    "lint:fix": "eslint docs/.vuepress/ --fix",
     "docs:preview": "http-server docs/.vuepress/dist",
     "vp-update": "pnpm dlx vp-update"
   },
