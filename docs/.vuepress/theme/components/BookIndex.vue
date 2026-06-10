@@ -1,7 +1,3 @@
-<template>
-  <Bookshelf :books="Books" @select="(b) => console.log('select', b)" />
-</template>
-
 <script setup lang="ts">
 import Bookshelf from './Bookshelf.vue'
 
@@ -16,7 +12,7 @@ const rawBooks = [
     pages: 480,
     tags: ['操作系统', '计算机'],
     description: '设计软件的上层思想与构建方法。',
-    target: '/read/OS/guidance/chap01/'
+    target: '/read/OS/guidance/chap01/',
   },
   // {
   //   id: ,
@@ -39,7 +35,7 @@ const rawBooks = [
     year: 2024,
     pages: 202,
     tags: ['医学', '历史', '导论'],
-    target: '/read/introduction-to-medicine/correspondent-index-of-chinese-and-english-terms/'
+    target: '/read/introduction-to-medicine/correspondent-index-of-chinese-and-english-terms/',
   },
   // {
   //   id: ,
@@ -57,6 +53,10 @@ const rawBooks = [
 // 统一加上前缀
 const Books = rawBooks.map(b => ({
   ...b,
-  cover: b.cover ? `/book-covers/${b.cover}` : ''
+  cover: b.cover ? `/book-covers/${b.cover}` : '',
 }))
 </script>
+
+<template>
+  <Bookshelf :books="Books" @select="(b) => console.log('select', b)" />
+</template>
