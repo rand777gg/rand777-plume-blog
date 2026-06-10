@@ -1,8 +1,8 @@
 node_modules/
 
-.vuepress/.cache
-.vuepress/.temp
-.vuepress/dist
+**/.vuepress/.cache
+**/.vuepress/.temp
+**/.vuepress/dist
 
 lib/
 dist/
