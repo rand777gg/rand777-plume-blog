@@ -35,6 +35,7 @@
 <style scoped>
 .declaration-wrapper {
   overflow-x: auto;
+
   -webkit-overflow-scrolling: touch;
 }
 
@@ -43,25 +44,26 @@
   gap: 16px;
   align-items: center;
   padding: 8px 0;
+
   /* 保持横向布局，不换行 */
   white-space: nowrap;
 }
 
 .declaration-item {
-  flex: 0 0 auto;
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   text-decoration: none;
 }
 
 .logo {
-  height: 50px;
-  width: auto; /* 保持原始宽高比，不拉伸 */
   display: block;
+  width: auto; /* 保持原始宽高比，不拉伸 */
+  height: 50px;
 }
 
 .logo.small {
-  height: 40px;
   width: auto;
+  height: 40px;
 }
 </style>

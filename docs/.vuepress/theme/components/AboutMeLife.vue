@@ -51,7 +51,7 @@ onMounted(() => {
 
 <template>
   <div class="about-me-card-bg vp-blog-post-item about-me-life">
-    <div style="margin-left: 20px">
+    <div style="margin-left: 20px;">
       <p class="about-me-card-title-normal">
         生活
       </p>

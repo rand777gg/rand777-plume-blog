@@ -922,7 +922,7 @@ onUnmounted(() => {
               <img
                 :src="snakeImage"
                 alt="github contribution grid snake animation"
-                style="visibility: visible; max-width: 100%;"
+                style=" max-width: 100%;visibility: visible;"
               >
             </slot>
           </template>
@@ -942,25 +942,25 @@ onUnmounted(() => {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
+  overflow: hidden !important;
 }
 
 .head-social {
-  display: flex;
-  width: fit-content;
-  margin: 0 auto;
-  align-items: center;
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .about-me {
   position: relative;
   z-index: 1;
+  width: 90%;
   max-width: 1380px;
   margin: 0 auto;
-  width: 90%;
+
   @media screen and (max-width: 770px) {
     width: 94%;
   }
@@ -970,30 +970,29 @@ onUnmounted(() => {
   z-index: 1;
   width: 100%;
   height: 100%;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
+  overflow: hidden !important;
 }
 
 canvas {
-  z-index: -1;
   position: fixed;
   top: -1px;
   left: -1px;
-  pointer-events: none;
+  z-index: -1;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .head-social {
   display: flex;
+  align-items: center;
   width: fit-content;
   margin: 0 auto;
-  align-items: center;
 
   .head-social-avatar {
-    margin: 20px;
-    border-radius: 30%;
-    overflow: hidden;
     width: 60px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 30%;
     transition: transform 0.2s;
 
     &:hover {
@@ -1002,11 +1001,11 @@ canvas {
   }
 
   .head-social-btn {
-    cursor: pointer;
-    font-size: 30px;
     margin: 0;
-    transition: transform 0.2s, color 0.3s;
+    font-size: 30px;
     color: var(--vp-c-text-2);
+    cursor: pointer;
+    transition: transform 0.2s, color 0.3s;
 
     &:hover {
       color: var(--vp-c-brand-1);
@@ -1016,25 +1015,27 @@ canvas {
 }
 
 &:hover {
-  background: var(--about-card-hover-bg);
   color: white;
-  transform: translateY(-2px);
+  background: var(--about-card-hover-bg);
   box-shadow: 0 4px 8px var(--main-border-shadow);
+  transform: translateY(-2px);
 }
 
 .about-me {
+  width: 90%;
   max-width: 1380px;
   margin: 0 auto;
-  width: 90%;
+
   @media screen and (max-width: 770px) {
     width: 94%;
   }
 }
 
 .card-content {
-  margin-top: 20px;
   display: grid;
   gap: 20px;
+  margin-top: 20px;
+
   @media screen and (max-width: 770px) {
     display: flex;
     flex-direction: column;
@@ -1057,9 +1058,11 @@ canvas {
   0% {
     background-position: 0 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0 50%;
   }
@@ -1069,8 +1072,8 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
 }
 </style>

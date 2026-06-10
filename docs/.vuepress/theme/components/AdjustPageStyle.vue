@@ -252,22 +252,22 @@ function resetFont() {
 
 /* 悬停提示样式 */
 .theme-button::after {
-  content: attr(data-name);
   position: absolute;
   bottom: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%) translateY(4px);
-  background: rgba(0, 0, 0, 0.78);
-  color: #fff;
-  padding: 6px 9px;
-  border-radius: 6px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.18s ease, transform 0.18s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   z-index: 1100;
+  padding: 6px 9px;
+  font-size: 12px;
+  color: #fff;
+  white-space: nowrap;
+  pointer-events: none;
+  content: attr(data-name);
+  background: rgb(0 0 0 / 0.78);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.25);
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  transform: translateX(-50%) translateY(4px);
 }
 
 .theme-button:hover::after {
@@ -281,10 +281,10 @@ function resetFont() {
 }
 
 .theme-icon {
-  cursor: pointer;
   padding: 4px;
-  border-radius: 6px;
   font-size: 0;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 .theme-icon .icon {
@@ -297,66 +297,66 @@ function resetFont() {
   position: absolute;
   top: 100%;
   right: 0;
+  z-index: 1000;
+  min-width: 260px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.4;
   background: var(--vp-c-bg);
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-  min-width: 260px;
-  font-size: 14px;
-  line-height: 1.4;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.15);
   transition: all 0.3s ease;
 }
 
 .theme-title {
-  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  margin: 0 0 12px;
   font-size: 15px;
   font-weight: 600;
   color: var(--vp-c-text-1);
   text-align: center;
   border-bottom: 1px solid var(--vp-c-divider);
-  padding-bottom: 8px;
 }
 
 .theme-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 12px;
+  justify-content: center;
   margin-bottom: 14px;
 }
 
 .theme-button {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  border: none;
   cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.2);
   transition: all 0.35s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .theme-button:hover {
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.3);
   transform: scale(1.2);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .theme-button.active {
-  box-shadow: 0 0 0 2px var(--vp-c-brand-1), 0 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 2px var(--vp-c-brand-1), 0 4px 16px rgb(0 0 0 / 0.25);
   transform: scale(1.25);
 }
 
 .theme-button-blue {
-  background: #E6F0FF;
+  background: #e6f0ff;
 }
 
 .theme-button-green {
-  background: #E8F5E9;
+  background: #e8f5e9;
 }
 
 .theme-button-yellow {
-  background: #FFF8E6;
+  background: #fff8e6;
 }
 
 .theme-button-grey {
@@ -372,7 +372,7 @@ function resetFont() {
 }
 
 .theme-button-white {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #ddd;
 }
 
@@ -384,9 +384,9 @@ function resetFont() {
 
 select {
   padding: 6px 8px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
   font-size: 0.95em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
@@ -409,13 +409,13 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 .reset-btn {
-  margin-top: 8px;
   padding: 6px 12px;
-  border-radius: 8px;
-  border: none;
-  background: linear-gradient(135deg, #0078d4, #00aaff);
+  margin-top: 8px;
   color: white;
   cursor: pointer;
+  background: linear-gradient(135deg, #0078d4, #0af);
+  border: none;
+  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
@@ -425,11 +425,13 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 /* 面板淡入淡出 */
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.3s ease;
 }
 
-.fade-enter-from, .fade-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 </style>

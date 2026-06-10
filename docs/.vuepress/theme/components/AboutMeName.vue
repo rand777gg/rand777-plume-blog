@@ -13,14 +13,15 @@
 </template>
 
 <style scoped>
-.about-me-name{
-  border-radius: 12px;
+.about-me-name {
   justify-content: center;
   padding: 2rem;
   color: #fff;
   background-image: linear-gradient(120deg, var(--vp-c-brand-3), var(--vp-c-brand-soft));
   background-size: 200% 200%;
-  >p{
+  border-radius: 12px;
+
+  >p {
     color: var(--vp-c-text-1);
   }
 }

@@ -29,23 +29,17 @@ import FRIENDS from '../data/friends.json'
 
 <style scoped>
 .about-me-friends-item {
-  user-select: none;
-  cursor: pointer;
   position: relative;
-  border-radius: 20%;
   width: 80px;
   height: 80px;
-  overflow: hidden;
   margin: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 20%;
 
   &:hover > img {
     transform: scale(1.2);
-  }
-
-  @media screen and (max-width: 770px) {
-    margin: 5px;
-    width: 60px;
-    height: 60px;
   }
 
   > img {
@@ -53,16 +47,23 @@ import FRIENDS from '../data/friends.json'
     height: 100%;
     transition: transform 0.3s ease;
   }
+
+  @media screen and (max-width: 770px) {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+  }
 }
 
 .about-me-friends-content {
-  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   max-height: 300px;
-  line-height: 45px;
+  margin-top: 20px;
   overflow: hidden;
+  line-height: 45px;
   text-overflow: ellipsis;
+
   @media screen and (max-width: 770px) {
     max-height: 200px;
   }
@@ -78,25 +79,25 @@ import FRIENDS from '../data/friends.json'
   justify-content: space-between;
 
   > a {
-    font-size: 16px;
-    color: var(--vp-c-text-1);
     display: inline-flex;
     align-items: center;
-    font-weight: 600;
-    border-radius: 10px;
-    padding: 10px;
     height: 40px;
-    transition: background-color 0.2s;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--vp-c-text-1);
     background: var(--vp-c-brand-2);
+    border-radius: 10px;
+    transition: background-color 0.2s;
 
     &:hover {
       background: var(--vp-c-brand-1);
     }
 
     @media screen and (max-width: 770px) {
+      height: 30px;
       padding: 7px;
       font-size: 14px;
-      height: 30px;
       border-radius: 5px;
     }
   }
