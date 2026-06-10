@@ -79,11 +79,11 @@ pnpm run docs:dev
 
 ## 代码检查（Lint）
 
-本项目配置了 ESLint + Stylelint + Markdownlint + Commitlint，提交前建议运行：
+本项目配置了 ESLint + Stylelint + Commitlint，提交前建议运行：
 
 ```bash
-pnpm lint              # 全量检查（ESLint + Stylelint + Markdownlint）
-pnpm lint:fix          # 自动修复格式问题（ESLint + Stylelint，不含 Markdown）
+pnpm lint              # 全量检查（ESLint + Stylelint）
+pnpm lint:fix          # 自动修复格式问题（ESLint + Stylelint）
 ```
 
 ### ESLint — 检查 .ts / .vue 中的脚本
@@ -115,23 +115,6 @@ pnpm lint:css --fix    # 自动修复
 | `Expected empty line before rule` | 规则前缺空行 | `--fix` 自动修复 |
 | `Unexpected vendor prefix` | 不需要的浏览器前缀 | `--fix` 自动删除 |
 
-### Markdownlint — 检查 .md 文章
-
-```bash
-pnpm lint:md           # 检查（需手动修复）
-```
-
-| 常见报错 | 含义 | 解决 |
-|----------|------|------|
-| `MD009/no-trailing-spaces` | 行末有多余空格 | 删除行末空格 |
-| `MD010/no-hard-tabs` | 用了 Tab 缩进 | 换成 2 空格 |
-| `MD012/no-multiple-blanks` | 连续多个空行 | 只保留一个空行 |
-| `MD022/blanks-around-headings` | 标题上下需要空行 | `## 标题` 前后各加一个空行 |
-| `MD031/blanks-around-fences` | 代码块上下需要空行 | \`\`\` 前后各加一个空行 |
-| `MD032/blanks-around-lists` | 列表上下需要空行 | 列表前后各加一个空行 |
-| `MD038/no-space-in-code` | 行内代码多余空格 | \` \`code\` \` 改成 \`\`code\`\` |
-| `MD047/single-trailing-newline` | 文件末尾不是单个换行 | 文件末尾保证一个换行 |
-
 ### 提交规范（Commitlint）
 
 提交信息必须遵循以下格式（`husky` 会在 `git commit` 时自动检查）：
@@ -159,7 +142,7 @@ Fix bug          ❌ type 必须全小写
 
 ### Lint 检查（lint.yaml）
 
-push 到 master 或提 Pull Request 时，GitHub Actions 自动运行 ESLint + Stylelint + Markdownlint。
+push 到 master 或提 Pull Request 时，GitHub Actions 自动运行 ESLint + Stylelint。
 
 ### 自动部署（gh-pages.yml）
 
